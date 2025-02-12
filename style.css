@@ -423,7 +423,6 @@ html {
 }
 @media(max-width : 1024px){
   .skill-container {
-    height: 260vh;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 99%, 0 100%);
     
   }
@@ -433,7 +432,7 @@ html {
 
 @media(max-width : 768px){
   .skill-container {
-    height: 380vh;
+  
     clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 99%, 0 100%);
     
   }
@@ -449,7 +448,7 @@ html {
 
 .project-container h1 {
   font-size: 2.5rem;
-  color: var(--white);
+  color: var(--black);
   padding-bottom: 20px;
   animation: fadeInDown 1s ease-in-out;
 }
