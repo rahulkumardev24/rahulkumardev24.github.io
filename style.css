@@ -62,9 +62,6 @@ html {
   height: 100%;
 }
 
-
-
-
 .nav-links ul {
   display: flex;
   gap: 2rem;
@@ -145,7 +142,6 @@ html {
   .hamburger {
     display: block;
   }
-
   .nav-links {
     position: fixed;
     top: 80px;
@@ -376,7 +372,6 @@ html {
 
 /* ----------Skills Section--------- */
 .skill-container {
-  height: 200vh;
   background-color: var(--dark-bg);
   padding: 1rem 20px;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 95%, 0 100%);
@@ -426,7 +421,7 @@ html {
   padding: 10px;
   border-radius: 50%;
 }
-@media(max-width : 1000px){
+@media(max-width : 1024px){
   .skill-container {
     height: 260vh;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 99%, 0 100%);
@@ -434,43 +429,16 @@ html {
   }
 }
 
-@media(max-width : 900px){
-  .skill-container {
-    height: 350vh;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 99%, 0 100%);
-    
-  }
-}
 
-@media(max-width : 700px){
+
+@media(max-width : 768px){
   .skill-container {
     height: 380vh;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 99%, 0 100%);
     
   }
 }
-@media(max-width : 600px){
-  .skill-container {
-    height: 480vh;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 99%, 0 100%);
-    
-  }
-}
-@media(max-width : 500px){
-  .skill-container {
-    height: 530vh;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 99%, 0 100%);
-    
-  }
-}
 
-@media(max-width : 400px){
-  .skill-container {
-    height: 580vh;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 99%, 0 100%);
-    
-  }
-}
 /* -----------------Projects Section------------- */
 .project-container {
   max-width: 1200px;
@@ -529,6 +497,9 @@ html {
   justify-content: center;
   overflow: hidden;
   border-radius: 14px;
+}
+.project-container h1{
+  color: #000;
 }
 
 .project-left img {
@@ -633,6 +604,7 @@ html {
 @media (max-width: 768px) {
   .project-container h1 {
     font-size: 2rem;
+    align-content: center;
   }
 
   .project-right h2 {

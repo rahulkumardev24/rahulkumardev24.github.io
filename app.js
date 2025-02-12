@@ -62,7 +62,7 @@ contactForm.addEventListener("submit", function (event) {
   const subject = document.getElementById("subject").value;
   const message = document.getElementById("message").value;
 
-  console.log(name, email, subject, message); // Check if values are captured
+  console.log(name, email, subject, message); 
 
   // Show confirmation alert
   alert(`Thank you, ${name}! Your message has been received.`);
