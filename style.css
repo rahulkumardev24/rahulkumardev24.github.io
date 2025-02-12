@@ -41,8 +41,7 @@ html {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Navigation */
+/* ----------- Navigation Styles ------------- */
 .nav-container {
   background-color: var(--black);
   height: 100px;
@@ -60,6 +59,16 @@ html {
   align-items: center;
   padding: 0 20px;
   height: 100%;
+}
+
+.main-nav .left {
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  transition: all 0.3s ease;
 }
 
 .nav-links ul {
@@ -82,7 +91,7 @@ html {
   color: var(--primary-color);
 }
 
-/* Hamburger Menu Styles */
+/* ----------- Hamburger Menu Styles ------------- */
 .hamburger {
   display: none;
   background: none;
@@ -91,10 +100,10 @@ html {
   padding: 0;
   width: 30px;
   height: 24px;
-  position: fixed; 
-  top: 20px; 
-  right: 20px; 
-  z-index: 1001; 
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  z-index: 1100;
 }
 
 .bar {
@@ -107,41 +116,12 @@ html {
   border-radius: 3px;
 }
 
-/* Updated Navigation Styles */
-.nav-container {
-  background-color: var(--black);
-  height: 60px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
-
-.main-nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  height: 100%;
-}
-.main-nav .left{
-  color: var(--primary-color);
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.nav-links {
-  transition: all 0.3s ease;
-}
-
-/* Media Queries for Responsive Navigation */
-/* For Mobile  */
+/* ----------- Responsive Navigation (Mobile) ------------- */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
   }
+
   .nav-links {
     position: fixed;
     top: 80px;
@@ -151,6 +131,11 @@ html {
     background-color: var(--dark-bg);
     padding: 2rem;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
   }
 
   .nav-links.active {
@@ -163,17 +148,13 @@ html {
     gap: 2rem;
   }
 
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-  }
-
   .nav-links a {
     display: block;
     padding: 1rem;
     font-size: 1.5rem;
   }
-  .main-nav .left{
+
+  .main-nav .left {
     font-size: 1.5rem;
   }
 
@@ -190,20 +171,13 @@ html {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  /* Hide the regular contact button on mobile */
+  /* Hide contact button on mobile */
   .main-nav .right {
     display: none;
   }
 }
-/* for tablet  */
-@media (min-width: 760px) {
-  .main-nav .left{
-    font-size: 1.5rem;
-  }
-  
-}
 
-/* Additional Mobile Optimization */
+/* ----------- Additional Mobile Optimization ------------- */
 @media (max-width: 480px) {
   .nav-container {
     height: 70px;
@@ -217,7 +191,75 @@ html {
   .nav-links a {
     font-size: 1.25rem;
   }
+
+  .hamburger {
+    top: 20px;
+    right: 15px;
+  }
 }
+
+/* Mobile Drawer Navigation */
+@media (max-width: 480px) {
+  .nav-container {
+    height: 70px;
+  }
+
+  .hamburger {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    z-index: 1100;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: var(--dark-bg);
+    padding: 2rem;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+  }
+
+  .nav-links.active {
+    left: 0;
+    display: flex;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    display: block;
+    font-size: 1.25rem;
+    padding: 10px;
+  }
+
+  /* Fix for close animation */
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+
 
 /* -------------------Home Section -------------------------*/
 .home {
