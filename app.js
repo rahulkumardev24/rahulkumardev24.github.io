@@ -50,7 +50,7 @@ cvDow.forEach((button) => {
 });
 
 // Select the contact form using the correct ID selector
-let contactForm = document.querySelector("#contact-form");
+let contactForm = document.querySelector("#contact-form"); 
 
 contactForm.addEventListener("submit", function (event) {
   event.preventDefault(); // Prevent default form submission
@@ -66,12 +66,13 @@ contactForm.addEventListener("submit", function (event) {
 
   // Show confirmation alert
   alert(`Thank you, ${name}! Your message has been received.`);
+   // Optionally, submit the form programmatically
+   this.submit();
 
   // Clear form fields after submission
   this.reset();
 
-  // Optionally, submit the form programmatically
-  this.submit();
+ 
 });
 
 
