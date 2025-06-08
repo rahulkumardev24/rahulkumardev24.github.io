@@ -36,7 +36,7 @@ cvDow.forEach((button) => {
   button.addEventListener("click", function () {
     /// resume  Drive Link
     const resumeLink =
-      "https://drive.google.com/uc?export=download&id=1X0wVkASA1z1cw9xtICDZ0p1a1tcc5ZVl";
+      "https://drive.google.com/uc?export=download&id=1-EJqyHu9bPwu_HGftUBw69JN111FZynq";
     /// here we craete <a>
     const downloadLink = document.createElement("a");
     downloadLink.href = resumeLink;
