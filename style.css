@@ -43,7 +43,7 @@ html {
 /* ----------- Navigation Styles ------------- */
 .nav-container {
   background-color: var(--black);
-  height: 100px;
+  height: 70px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -51,7 +51,7 @@ html {
 }
 
 .main-nav {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -115,10 +115,14 @@ html {
   border-radius: 3px;
 }
 
-/* ----------- Responsive Navigation (Mobile) ------------- */
+/* ----------- Responsive Navigation (Tablet) ------------- */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    position: fixed;
+    top: 20px;
+    right: 15px;
+    z-index: 1100;
   }
 
   .nav-links {
@@ -176,32 +180,9 @@ html {
   }
 }
 
-/* ----------- Additional Mobile Optimization ------------- */
+/* Mobile Friendly */
 @media (max-width: 480px) {
-  .nav-container {
-    height: 70px;
-  }
 
-  .nav-links {
-    top: 70px;
-    height: calc(100vh - 70px);
-  }
-
-  .nav-links a {
-    font-size: 1.25rem;
-  }
-
-  .hamburger {
-    top: 20px;
-    right: 15px;
-  }
-}
-
-/* Mobile Drawer Navigation */
-@media (max-width: 480px) {
-  .nav-container {
-    height: 70px;
-  }
 
   .hamburger {
     display: block;
@@ -257,8 +238,6 @@ html {
     transform: translateY(-8px) rotate(-45deg);
   }
 }
-
-
 
 /* -------------------Home Section -------------------------*/
 .home {
@@ -332,7 +311,6 @@ html {
   width: 30px;
   height: 30px;
   display: flex;
-  
 }
 @media (max-width: 768px) {
   .home {
@@ -343,12 +321,12 @@ html {
   }
 
   .account {
-   justify-content: center;
+    justify-content: center;
   }
 
   .home .left {
     width: 100%;
-    margin-bottom: 2rem; 
+    margin-bottom: 2rem;
   }
 
   .profile {
@@ -416,7 +394,7 @@ html {
 .skills-section {
   background-color: var(--dark-bg);
   padding: 5rem 2rem;
-     clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 95%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 95%, 0 100%);
   margin-bottom: 5rem;
 }
 
@@ -468,13 +446,17 @@ html {
 }
 
 .skill-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 100%
+  );
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -547,7 +529,7 @@ html {
 }
 
 .level-bar::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -570,13 +552,12 @@ html {
   margin-top: 3rem;
 }
 
-
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .skills-section {
-     clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 98%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 98%, 0 100%);
   }
-  
+
   .skills-grid {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
@@ -584,23 +565,23 @@ html {
 
 @media (max-width: 768px) {
   .skills-section {
-     clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 98%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 98%, 0 100%);
     padding: 4rem 1.5rem;
   }
-  
+
   .section-title {
     font-size: 2.2rem;
   }
-  
+
   .skills-grid {
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 1.5rem;
   }
-  
+
   .skill-card {
     padding: 1.5rem 1rem;
   }
-  
+
   .skill-icon {
     width: 60px;
     height: 60px;
@@ -613,11 +594,11 @@ html {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 1rem;
   }
-  
+
   .skill-card h3 {
     font-size: 1.1rem;
   }
-  
+
   .cta-button {
     padding: 0.8rem 1.8rem;
     font-size: 1rem;
@@ -637,7 +618,7 @@ html {
   margin: 0 auto;
   padding: 0 20px;
 }
-  
+
 .section-header {
   text-align: center;
   margin-bottom: 3rem;
@@ -794,16 +775,13 @@ html {
   margin-top: 3rem;
 }
 
-.cta-container  a {
+.cta-container a {
   text-decoration: none;
-     font-size: 1.0rem;
-    padding: 10px;
-    color: #000;
-    font-weight: bold;
-  
-
+  font-size: 1rem;
+  padding: 10px;
+  color: #000;
+  font-weight: bold;
 }
-
 
 /* Responsive Styles */
 @media (max-width: 1024px) {
@@ -816,11 +794,11 @@ html {
   .section-header h1 {
     font-size: 2.3rem;
   }
-  
+
   .section-subtitle {
     font-size: 1rem;
   }
-  
+
   .project-media {
     height: 220px;
   }
@@ -830,19 +808,18 @@ html {
   .projects-showcase {
     padding: 3rem 0;
   }
-  
+
   .section-header h1 {
     font-size: 2rem;
   }
-  
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
-  
 }
 /* ------------ Freelancer Section----------------- */
 .freelance {
-  position: relative;     
+  position: relative;
 }
 
 .freelance-container {
@@ -859,7 +836,7 @@ html {
   justify-content: center;
   align-items: center;
   text-align: center;
- 
+
   /* clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 90%, 0 100%); */
 }
 
@@ -894,7 +871,6 @@ html {
   color: var(--white);
   border-color: var(--white);
 }
-
 
 /* ---------------------Contact Section---------------------- */
 
@@ -1005,7 +981,6 @@ html {
   transform: translateY(-2px);
 }
 
-
 /* ------------Footer Section------------------- */
 .footer {
   background: var(--dark-bg);
@@ -1023,7 +998,6 @@ html {
 
 /* Media Queries */
 
-
 @media (max-width: 480px) {
   .nav-links {
     display: none;
@@ -1033,8 +1007,6 @@ html {
     grid-template-columns: 1fr;
   }
 }
-
-
 
 /* Footer Section */
 .footer {
@@ -1124,7 +1096,6 @@ html {
 .social-links img {
   width: 20px;
   height: 20px;
- 
 }
 
 .footer-section.newsletter input {
