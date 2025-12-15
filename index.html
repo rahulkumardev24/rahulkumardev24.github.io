@@ -39,7 +39,6 @@
     </title>
   </head>
   <body>
-    <div class="site-main">
       <header>
         <!-- Normal navigation  -->
         <div class="nav-container">
@@ -53,6 +52,7 @@
                 <li><a href="">Home</a></li>
                 <!-- navigation -->
                 <li><a href="#about">About</a></li>
+                <li><a href="#apps">Apps</a></li>
                 <li><a href="#skills">Skill</a></li>
                 <li><a href="#projects">Projects</a></li>
               </ul>
@@ -81,6 +81,7 @@
             <ul>
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
+              <li><a href="#apps">Apps</a></li>
               <li><a href="#skill">Skills</a></li>
               <li><a href="#project">Projects</a></li>
             </ul>
@@ -93,8 +94,9 @@
 
         <!-- HOME  -->
         <div class="home">
+          <canvas id="particles-canvas"></canvas>
           <div class="left">
-            <p id="greet">Hi, <span> I am</span></p>
+            <p id="greet">Hi, I'm <span class="typing-text"></span></p>
 
             <h2>Rahul Kumar Sahu</h2>
             <p id="developer">
@@ -136,484 +138,701 @@
           <div class="profile">
             <div id="profile"><img src="profile.png" alt="profile" /></div>
           </div>
+          </div>
+          
+          <div class="scroll-down"></div>
         </div>
       </header>
-    </div>
 
     <!-- BODY  -->
 
-    <body>
-      <!-- ABOUT -->
-      <section id="about" class="about">
-        <div class="about-left"><img src="about_img.jpg" alt="" /></div>
-        <div class="about-right">
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <div class="about-left reveal-left">
+          <img src="about_img.jpg" alt="Rahul Kumar Sahu" />
+        </div>
+        <div class="about-right reveal-right">
           <h1>About <span>Me</span></h1>
-          <h4>Hello i'm Rahul Kumar Sahu</h4>
+          <h4>Hello, I'm Rahul Kumar Sahu</h4>
           <p>
-            an enthusiastic <span>Mobile Application</span> and
-            <span>Website Developer</span> from Madhubani, <span>Bihar</span>.
-            I’m passionate about turning ideas into reality by creating
-            beautiful, functional, and user-friendly mobile apps and websites
-            that make life <span>easier</span> and
-            <span>more enjoyable</span> for everyone.
+            An enthusiastic <span>Full-Stack Developer</span> with expertise in <span>Mobile Applications</span> and <span>Website Development</span> from Madhubani, <span>Bihar</span>. I'm passionate about turning innovative ideas into reality by creating beautiful, functional, and user-friendly digital solutions that make life <span>easier and more enjoyable</span> for everyone.
           </p>
-          <hr />
           <p>
-            <span> Currently,</span>
-            I’m pursuing my Master of Computer Applications
-            <span>(MCA)</span> from Chandigarh University, and I’ve already
-            built <span>20+</span> mobile apps that showcase my
-            <span>skills</span> and <span>creativity</span>. My passion for
-            technology started during my BSc in Math Honours from LNMU, where I
-            learned to think <span>logically</span> and
-            <span>solve problems</span> systematically.
+            With <span>20+</span> published mobile applications on Google Play Store and a strong foundation in both frontend and backend technologies, I bring ideas to life with clean code and modern design principles. I specialize in creating scalable, performant applications using cutting-edge technologies.
           </p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="highlight-label">Location:</span>
+              <span class="highlight-value">Delhi, India</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-label">Specialization:</span>
+              <span class="highlight-value">Flutter App Developer</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-label">Apps Published:</span>
+              <span class="highlight-value">10+ on Google Play Store</span>
+            </div>
+
+              <div class="highlight-item">
+              <span class="highlight-label">Apps Developed : </span>
+              <span class="highlight-value">25+ Apps</span>
+            </div>
+
+          </div>
           <button class="common-btn" id="cvDow">DOWNLOAD CV</button>
         </div>
-      </section>
-      <!-- Skill -->
-      <section class="skills-section" id="skills">
-        <div class="skills-container">
-          <div class="section-header">
-            <h1 class="section-title" , style="color: white">
-              My <span>Skills</span>
-            </h1>
-            <p class="section-subtitle">
-              Technologies I've mastered and worked with
-            </p>
-          </div>
+      </div>
+    </section>
 
-          <div class="skills-grid">
-            <!-- Flutter -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="icon/flutter icon new.webp"
-                  alt="Flutter"
-                  loading="lazy"
-                />
-                <div class="icon-background"></div>
-              </div>
-              <h3>Flutter</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 90%"></div>
-                <span>90%</span>
-              </div>
-            </div>
-
-            <!-- Dart -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img src="icon/dartnew.png" alt="Dart" loading="lazy" />
-                <div class="icon-background"></div>
-              </div>
-              <h3>Dart</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 85%"></div>
-                <span>85%</span>
-              </div>
-            </div>
-
-            <!-- Firebase -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="icon/firebase icon.png"
-                  alt="Firebase"
-                  loading="lazy"
-                />
-                <div class="icon-background"></div>
-              </div>
-              <h3>Firebase</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 80%"></div>
-                <span>80%</span>
-              </div>
-            </div>
-
-            <!-- supabase -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img src="icon/supabase.png" alt="supabase" loading="lazy" />
-                <div class="icon-background"></div>
-              </div>
-              <h3>Supabase</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 80%"></div>
-                <span>65%</span>
-              </div>
-            </div>
-
-            <!-- SQLite -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img src="icon/sqlite new.png" alt="SQLite" loading="lazy" />
-                <div class="icon-background"></div>
-              </div>
-              <h3>SQLite</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 75%"></div>
-                <span>75%</span>
-              </div>
-            </div>
-
-            <!-- API -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img src="icon/api icon.png" alt="Api" loading="lazy" />
-                <div class="icon-background"></div>
-              </div>
-              <h3>API Intergration</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 75%"></div>
-                <span>75%</span>
-              </div>
-            </div>
-
-            <!-- SQL -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img src="icon/mysqlnew.png" alt="MySQL" loading="lazy" />
-                <div class="icon-background"></div>
-              </div>
-              <h3>SQL</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 70%"></div>
-                <span>70%</span>
-              </div>
-            </div>
-
-            <!-- HTML -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img src="icon/html55.png" alt="HTML" loading="lazy" />
-                <div class="icon-background"></div>
-              </div>
-              <h3>HTML5</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 95%"></div>
-                <span>95%</span>
-              </div>
-            </div>
-
-            <!-- CSS -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img src="icon/css.png" alt="CSS" loading="lazy" />
-                <div class="icon-background"></div>
-              </div>
-              <h3>CSS</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 90%"></div>
-                <span>90%</span>
-              </div>
-            </div>
-
-            <!-- Bootstrap -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img src="icon/bootstrap.png" alt="Bootstrap" loading="lazy" />
-                <div class="icon-background"></div>
-              </div>
-              <h3>Bootstrap</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 85%"></div>
-                <span>85%</span>
-              </div>
-            </div>
-
-            <!-- JavaScript -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img src="icon/jss.png" alt="JavaScript" loading="lazy" />
-                <div class="icon-background"></div>
-              </div>
-              <h3>JavaScript</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 75%"></div>
-                <span>75%</span>
-              </div>
-            </div>
-
-            <!-- Kotlin -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img src="icon/kotlin.png" alt="Kotlin" loading="lazy" />
-                <div class="icon-background"></div>
-              </div>
-              <h3>Kotlin</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 65%"></div>
-                <span>65%</span>
-              </div>
-            </div>
-
-            <!-- Java -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img src="icon/java.png" alt="java" loading="lazy" />
-                <div class="icon-background"></div>
-              </div>
-              <h3>Java</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 65%"></div>
-                <span>65%</span>
-              </div>
-            </div>
-
-            <!-- Python -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img src="icon/python.png" alt="python" loading="lazy" />
-                <div class="icon-background"></div>
-              </div>
-              <h3>Python</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 65%"></div>
-                <span>65%</span>
-              </div>
-            </div>
-
-            <!-- Canvas -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img src="icon/canvas icon.webp" alt="Canva" loading="lazy" />
-                <div class="icon-background"></div>
-              </div>
-              <h3>Canva</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 65%"></div>
-                <span>65%</span>
-              </div>
-            </div>
-
-            <!-- Adobe Premiere Pro -->
-            <div class="skill-card">
-              <div class="skill-icon">
-                <img
-                  src="icon/adobe-premiere-pro.webp"
-                  alt="Adobe Premiere Pro"
-                  loading="lazy"
-                />
-                <div class="icon-background"></div>
-              </div>
-              <h3>Adobe Premiere Pro</h3>
-              <div class="skill-level">
-                <div class="level-bar" style="width: 65%"></div>
-                <span>50%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="projects-showcase" id="projects">
-        <div class="container">
-          <div class="section-header">
-            <h1>Latest <span>Projects</span></h1>
-            <p class="section-subtitle">
-              Explore my work and see what I've created with my skills
-            </p>
-          </div>
-
-          <div class="projects-grid">
-            <!-- Project 1 -->
-            <div class="project-card">
-              <div class="project-media">
-                <img
-                  src="video/smart expiry tracker.png"
-                  alt="News App"
-                  class="project-image"
-                />
-                <div class="project-hover">
-                  <div class="project-logo">
-                    <img
-                      src="project icon/smart expiry.webp"
-                      alt="News App Logo"
-                    />
-                  </div>
-                  <h3>Smart Expiry Tracker</h3>
-                  <a
-                    href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.smartexpirytracker"
-                    class="project-link"
-                    target="_blank"
-                  >
-                    <i class="fas fa-external-link-alt"></i> View Project
-                  </a>
-                </div>
-              </div>
-              <div class="project-details">
-                <p>
-                  Developed a smart inventory management app using Flutter to
-                  track expiry dates of food, medicine, and other daily-use
-                  items. Integrated local storage with Hive and local
-                  notification for timely expiry alerts. Implemented product
-                  categorization, image-based item tracking, and custom
-                  animations with Lottie
-                </p>
-                <div class="project-tech">
-                  <span>Flutter</span>
-                  <span>Dart</span>
-                  <span>Hive-Database</span>
-                  <span>Notification-local</span>
-                  <span>UI/UX</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project 2 -->
-            <div class="project-card">
-              <div class="project-media">
-                <img
-                  src="video/ping me new.png"
-                  alt="Weather App"
-                  class="project-image"
-                />
-                <div class="project-hover">
-                  <div class="project-logo">
-                    <img
-                      src="project icon/app_logo.png"
-                      alt="Weather App Logo"
-                    />
-                  </div>
-                  <h3>Ping Me</h3>
-                  <a
-                    href="https://github.com/rahulkumardev24/PingMe---Flutter-Chat-App"
-                    class="project-link"
-                    target="_blank"
-                  >
-                    <i class="fas fa-external-link-alt"></i> View Project
-                  </a>
-                </div>
-              </div>
-              <div class="project-details">
-                <p>
-                  Developed a real-time chat app using Flutter and Firebase that
-                  supports text, emoji, and video messaging. Integrated Google
-                  Sign-In authentication, message status tracking (sent, seen,
-                  seen time), and user last seen updates.
-                </p>
-                <div class="project-tech">
-                  <span>Flutter</span>
-                  <span>Dart</span>
-                  <span>Firebase</span>
-                  <span>Real-time</span>
-                  <span>UI/UX</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Project 3 -->
-            <div class="project-card">
-              <div class="project-media">
-                <img
-                  src="video/Chatbot app portfolio.png"
-                  alt="Chat bot"
-                  class="project-image"
-                />
-                <div class="project-hover">
-                  <div class="project-logo">
-                    <img src="project icon/chat bot.png" alt="Chat bot" />
-                  </div>
-                  <h3>Chat bot</h3>
-                  <a
-                    href="https://github.com/rahulkumardev24/chat_bot_app"
-                    class="project-link"
-                    target="_blank"
-                  >
-                    <i class="fas fa-external-link-alt"></i> View Project
-                  </a>
-                </div>
-              </div>
-              <div class="project-details">
-                <p>
-                  Developed an AI-powered chatbot app using Flutter that
-                  delivers real-time responses using Google Gemini API.
-                  Implemented animated typing effects with AnimatedTextKit and
-                  supported local message history. Integrated dark/light mode
-                  and designed a clean, responsive UI with smooth animations
-                </p>
-                <div class="project-tech">
-                  <span>Flutter</span>
-                  <span>Dart</span>
-                  <span>API</span>
-                  <span>Real-time</span>
-                  <span>UI/UX</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="cta-container">
-            <a href="projects.html" class="common-btn"> View All Projects </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- I Am Open for Freelance Projects -->
-
-      <section class="freelance" id="freelance">
-        <div class="freelance-container">
-          <h1>I Am Open for Freelance Projects</h1>
-          <p>
-            Your trusted partner for creating innovative mobile apps and
-            high-standard websites.
+    <!-- GOOGLE PLAY STORE APPS -->
+    <section class="apps-section" id="apps">
+      <div class="apps-container">
+        <div class="section-header reveal">
+          <h1>My Apps on <span>Google Play Store</span></h1>
+          <p class="section-subtitle">
+            Explore my published applications available for download
           </p>
-          <button class="common-btn" id="cvDow">DOWNLOAD CV</button>
         </div>
-      </section>
 
-      <!-- Contact me  -->
-      <!-- CONTACT ME SECTION -->
-      <section class="contact" id="contact">
-        <div class="contact-container">
-          <h1><span>Contact</span> Me</h1>
-          <p>
-            Feel free to reach out for collaborations or just a friendly chat!
+        <div class="apps-grid">
+          <!-- App 1: Simon Say -->
+          <div class="app-card">
+            <div class="app-icon-container">
+              <img src="project icon/simony say.webp" alt="Simon Say App" class="app-icon" />
+            </div>
+            <h3>Simon Say</h3>
+            <p>A fun and engaging memory game</p>
+            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.simonsay" target="_blank" class="app-link">
+              <i class="fas fa-play"></i> View on Play Store
+            </a>
+          </div>
+
+          <!-- App 2: FactFuel -->
+          <div class="app-card">
+            <div class="app-icon-container">
+              <img src="project icon/fact fule.webp" alt="FactFuel App" class="app-icon" />
+            </div>
+            <h3>FactFuel</h3>
+            <p>Discover interesting facts and knowledge</p>
+            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.factfuel" target="_blank" class="app-link">
+              <i class="fas fa-play"></i> View on Play Store
+            </a>
+          </div>
+
+          <!-- App 3: Smart Expiry Tracker -->
+          <div class="app-card">
+            <div class="app-icon-container">
+              <img src="project icon/expiry tracker.png" alt="Smart Expiry Tracker" class="app-icon" />
+            </div>
+            <h3>Smart Expiry Tracker</h3>
+            <p>Track expiry dates of products efficiently</p>
+            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.smartexpirytracker" target="_blank" class="app-link">
+              <i class="fas fa-play"></i> View on Play Store
+            </a>
+          </div>
+
+          <!-- App 4: Card Matching Memory Game -->
+          <div class="app-card">
+            <div class="app-icon-container">
+              <img src="project icon/match game.webp" alt="Card Matching Memory Game" class="app-icon" />
+            </div>
+            <h3>Card Matching Memory Game</h3>
+            <p>Test your memory with this classic game</p>
+            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.card_matching_memory_game" target="_blank" class="app-link">
+              <i class="fas fa-play"></i> View on Play Store
+            </a>
+          </div>
+
+          <!-- App 5: Tic Tac Toe -->
+          <div class="app-card">
+            <div class="app-icon-container">
+              <img src="project icon/tic-tac-toe.png" alt="Tic Tac Toe" class="app-icon" />
+            </div>
+            <h3>Tic Tac Toe</h3>
+            <p>Classic game with modern design</p>
+            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.tictaktoe" target="_blank" class="app-link">
+              <i class="fas fa-play"></i> View on Play Store
+            </a>
+          </div>
+
+          <!-- App 6: Baby Book -->
+          <div class="app-card">
+            <div class="app-icon-container">
+              <img src="project icon/kids app.webp" alt="Baby Book" class="app-icon" />
+            </div>
+            <h3>Baby Book</h3>
+            <p>Create and manage baby memories</p>
+            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.babybook" target="_blank" class="app-link">
+              <i class="fas fa-play"></i> View on Play Store
+            </a>
+          </div>
+        </div>
+
+        <div class="apps-cta-button">
+          <a href="https://play.google.com/store/apps/developer?id=AppCreateRahul" target="_blank" class="view-more-btn">
+            View More Apps
+          </a>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Skill -->
+    <section class="skills-section" id="skills">
+      <div class="skills-container">
+        <div class="section-header reveal">
+          <h1 class="section-title" , style="color: white">
+            My <span>Skills</span>
+          </h1>
+          <p class="section-subtitle">
+            Technologies I've mastered and worked with
           </p>
-
-          <!-- Form  -->
-          <!-- Contact Form -->
-          <form
-            id="contact-form"
-            action="https://formsubmit.co/rahulsahudev24@gmail.com"
-            method="POST"
-          >
-            <div class="input-group">
-              <label for="name">Full Name</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-
-            <div class="input-group">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-
-            <div class="input-group">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" required />
-            </div>
-
-            <div class="input-group">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-              ></textarea>
-            </div>
-
-            <button type="submit" class="common-btn">Send Message</button>
-          </form>
         </div>
-      </section>
-    </body>
+
+        <div class="skills-grid reveal">
+          <!-- Flutter -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="icon/flutter icon new.webp"
+                alt="Flutter"
+                loading="lazy"
+              />
+              <div class="icon-background"></div>
+            </div>
+            <h3>Flutter</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 90%"></div>
+              <span>90%</span>
+            </div>
+          </div>
+
+          <!-- Dart -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="icon/dartnew.png" alt="Dart" loading="lazy" />
+              <div class="icon-background"></div>
+            </div>
+            <h3>Dart</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 85%"></div>
+              <span>85%</span>
+            </div>
+          </div>
+
+          <!-- Firebase -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="icon/firebase icon.png"
+                alt="Firebase"
+                loading="lazy"
+              />
+              <div class="icon-background"></div>
+            </div>
+            <h3>Firebase</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 80%"></div>
+              <span>80%</span>
+            </div>
+          </div>
+
+          <!-- supabase -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="icon/supabase.png" alt="supabase" loading="lazy" />
+              <div class="icon-background"></div>
+            </div>
+            <h3>Supabase</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 80%"></div>
+              <span>65%</span>
+            </div>
+          </div>
+
+          <!-- SQLite -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="icon/sqlite new.png" alt="SQLite" loading="lazy" />
+              <div class="icon-background"></div>
+            </div>
+            <h3>SQLite</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 75%"></div>
+              <span>75%</span>
+            </div>
+          </div>
+
+          <!-- API -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="icon/api icon.png" alt="Api" loading="lazy" />
+              <div class="icon-background"></div>
+            </div>
+            <h3>API Intergration</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 75%"></div>
+              <span>75%</span>
+            </div>
+          </div>
+
+          <!-- SQL -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="icon/mysqlnew.png" alt="MySQL" loading="lazy" />
+              <div class="icon-background"></div>
+            </div>
+            <h3>SQL</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 70%"></div>
+              <span>70%</span>
+            </div>
+          </div>
+
+          <!-- HTML -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="icon/html55.png" alt="HTML" loading="lazy" />
+              <div class="icon-background"></div>
+            </div>
+            <h3>HTML5</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 95%"></div>
+              <span>95%</span>
+            </div>
+          </div>
+
+          <!-- CSS -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="icon/css.png" alt="CSS" loading="lazy" />
+              <div class="icon-background"></div>
+            </div>
+            <h3>CSS</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 90%"></div>
+              <span>90%</span>
+            </div>
+          </div>
+
+          <!-- Bootstrap -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="icon/bootstrap.png" alt="Bootstrap" loading="lazy" />
+              <div class="icon-background"></div>
+            </div>
+            <h3>Bootstrap</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 85%"></div>
+              <span>85%</span>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="icon/jss.png" alt="JavaScript" loading="lazy" />
+              <div class="icon-background"></div>
+            </div>
+            <h3>JavaScript</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 75%"></div>
+              <span>75%</span>
+            </div>
+          </div>
+
+          <!-- Kotlin -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="icon/kotlin.png" alt="Kotlin" loading="lazy" />
+              <div class="icon-background"></div>
+            </div>
+            <h3>Kotlin</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 65%"></div>
+              <span>65%</span>
+            </div>
+          </div>
+
+          <!-- Java -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="icon/java.png" alt="java" loading="lazy" />
+              <div class="icon-background"></div>
+            </div>
+            <h3>Java</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 65%"></div>
+              <span>65%</span>
+            </div>
+          </div>
+
+          <!-- Python -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="icon/python.png" alt="python" loading="lazy" />
+              <div class="icon-background"></div>
+            </div>
+            <h3>Python</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 65%"></div>
+              <span>65%</span>
+            </div>
+          </div>
+
+          <!-- Canvas -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img src="icon/canvas icon.webp" alt="Canva" loading="lazy" />
+              <div class="icon-background"></div>
+            </div>
+            <h3>Canva</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 65%"></div>
+              <span>65%</span>
+            </div>
+          </div>
+
+          <!-- Adobe Premiere Pro -->
+          <div class="skill-card">
+            <div class="skill-icon">
+              <img
+                src="icon/adobe-premiere-pro.webp"
+                alt="Adobe Premiere Pro"
+                loading="lazy"
+              />
+              <div class="icon-background"></div>
+            </div>
+            <h3>Adobe Premiere Pro</h3>
+            <div class="skill-level">
+              <div class="level-bar" style="width: 65%"></div>
+              <span>50%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-showcase" id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <h1>Latest <span>Projects</span></h1>
+          <p class="section-subtitle">
+            Explore my work and see what I've created with my skills
+          </p>
+        </div>
+
+        <div class="projects-grid reveal">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-media">
+              <img
+                src="video/smart expiry tracker.png"
+                alt="News App"
+                class="project-image"
+              />
+              <div class="project-hover">
+                <div class="project-logo">
+                  <img
+                    src="project icon/smart expiry.webp"
+                    alt="News App Logo"
+                  />
+                </div>
+                <h3>Smart Expiry Tracker</h3>
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.smartexpirytracker"
+                  class="project-link"
+                  target="_blank"
+                >
+                  <i class="fas fa-external-link-alt"></i> View Project
+                </a>
+              </div>
+            </div>
+            <div class="project-details">
+              <p>
+                Developed a smart inventory management app using Flutter to
+                track expiry dates of food, medicine, and other daily-use
+                items. Integrated local storage with Hive and local
+                notification for timely expiry alerts. Implemented product
+                categorization, image-based item tracking, and custom
+                animations with Lottie
+              </p>
+              <div class="project-tech">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Hive-Database</span>
+                <span>Notification-local</span>
+                <span>UI/UX</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-media">
+              <img
+                src="video/ping me new.png"
+                alt="Weather App"
+                class="project-image"
+              />
+              <div class="project-hover">
+                <div class="project-logo">
+                  <img
+                    src="project icon/app_logo.png"
+                    alt="Weather App Logo"
+                  />
+                </div>
+                <h3>Ping Me</h3>
+                <a
+                  href="https://github.com/rahulkumardev24/PingMe---Flutter-Chat-App"
+                  class="project-link"
+                  target="_blank"
+                >
+                  <i class="fas fa-external-link-alt"></i> View Project
+                </a>
+              </div>
+            </div>
+            <div class="project-details">
+              <p>
+                Developed a real-time chat app using Flutter and Firebase that
+                supports text, emoji, and video messaging. Integrated Google
+                Sign-In authentication, message status tracking (sent, seen,
+                seen time), and user last seen updates.
+              </p>
+              <div class="project-tech">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>Firebase</span>
+                <span>Real-time</span>
+                <span>UI/UX</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-media">
+              <img
+                src="video/Chatbot app portfolio.png"
+                alt="Chat bot"
+                class="project-image"
+              />
+              <div class="project-hover">
+                <div class="project-logo">
+                  <img src="project icon/chat bot.png" alt="Chat bot" />
+                </div>
+                <h3>Chat bot</h3>
+                <a
+                  href="https://github.com/rahulkumardev24/chat_bot_app"
+                  class="project-link"
+                  target="_blank"
+                >
+                  <i class="fas fa-external-link-alt"></i> View Project
+                </a>
+              </div>
+            </div>
+            <div class="project-details">
+              <p>
+                Developed an AI-powered chatbot app using Flutter that
+                delivers real-time responses using Google Gemini API.
+                Implemented animated typing effects with AnimatedTextKit and
+                supported local message history. Integrated dark/light mode
+                and designed a clean, responsive UI with smooth animations
+              </p>
+              <div class="project-tech">
+                <span>Flutter</span>
+                <span>Dart</span>
+                <span>API</span>
+                <span>Real-time</span>
+                <span>UI/UX</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cta-container">
+          <a href="projects.html" class="common-btn"> View All Projects </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="education-section">
+      <div class="education-container">
+        <div class="section-header reveal">
+          <h1>My <span>Education</span></h1>
+          <p class="section-subtitle">
+            Building my foundation through quality education and continuous learning
+          </p>
+        </div>
+
+        <div class="education-timeline reveal">
+          <!-- MCA -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="content-header">
+                <h5>Master of Computer Applications</h5>
+              </div>
+              <p class="degree">(MCA)</p>
+              <p class="institution">
+                <i class="fas fa-map-marker-alt"></i>
+                Chandigarh University, Punjab
+              </p>
+              <p class="duration">
+                <i class="fas fa-calendar-alt"></i>
+                2023 - 2025
+              </p>
+              <p class="description">Specialized in cloud computing, software development, and modern frameworks. Building industry-ready applications.</p>
+            </div>
+          </div>
+
+          <!-- B.Sc -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-book"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="content-header">
+                <h5>Bachelor of Science</h5>
+              </div>
+              <p class="degree">(B.Sc) Mathematics Honours</p>
+              <p class="institution">
+                <i class="fas fa-map-marker-alt"></i>
+                Lalit Narayan Mithila University (LNMU), Darbhanga, Bihar
+              </p>
+              <p class="duration">
+                <i class="fas fa-calendar-alt"></i>
+                2019 - 2023
+              </p>
+              <p class="description">Strong mathematical foundation with focus on algorithms, data structures, and logical problem-solving.</p>
+            </div>
+          </div>
+
+          <!-- 12th Grade -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-microscope"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="content-header">
+                <h5>Senior Secondary</h5>
+            
+              </div>
+              <p class="degree">(12th Grade)</p>
+              <p class="institution">
+                <i class="fas fa-map-marker-alt"></i>
+                Bihar School Examination Board (BSEB)
+              </p>
+              <p class="duration">
+                <i class="fas fa-calendar-alt"></i>
+                2017 - 2019
+              </p>
+              <p class="description">Science stream specializing in Physics, Chemistry, and Mathematics. Strong performance in quantitative subjects laid the groundwork for higher education.</p>
+            </div>
+          </div>
+
+          <!-- 10th Grade -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-school"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="content-header">
+                <h5>Secondary School</h5>
+              
+              </div>
+              <p class="degree">(10th Grade)</p>
+              <p class="institution">
+                <i class="fas fa-map-marker-alt"></i>
+                Bihar School Examination Board (BSEB)
+              </p>
+              <p class="duration">
+                <i class="fas fa-calendar-alt"></i>
+                2015 - 2017
+              </p>
+              <p class="description">Completed secondary education with strong academic performance in core subjects. Foundation year that sparked interest in technology and mathematics.</p>
+            </div>
+          </div>
+        </div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- I Am Open for Freelance Projects -->
+
+    <section class="freelance" id="freelance">
+      <div class="freelance-container reveal">
+        <h1>I Am Open for Freelance Projects</h1>
+        <p>
+          Your trusted partner for creating innovative mobile apps and
+          high-standard websites.
+        </p>
+        <button class="common-btn" id="cvDow">DOWNLOAD CV</button>
+      </div>
+    </section>
+
+    <!-- Contact me  -->
+    <!-- CONTACT ME SECTION -->
+    <section class="contact" id="contact">
+      <div class="contact-container reveal">
+        <h1><span>Contact</span> Me</h1>
+        <p>
+          Feel free to reach out for collaborations or just a friendly chat!
+        </p>
+
+        <!-- Form  -->
+        <!-- Contact Form -->
+        <form
+          id="contact-form"
+          action="https://formsubmit.co/rahulsahudev24@gmail.com"
+          method="POST"
+          class="reveal"
+        >
+          <div class="input-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="input-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required />
+          </div>
+
+          <div class="input-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="common-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
 
     <footer>
       <!-- FOOTER SECTION -->
       <footer class="footer">
-        <div class="footer-container">
+        <div class="footer-container reveal">
           <!-- Footer Branding & About -->
           <div class="footer-section about">
             <h2>Rahul Kumar Sahu</h2>
@@ -629,6 +848,7 @@
               <!-- internal linking  + -->
               <li><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
+              <li><a href="#apps">Apps</a></li>
               <li><a href="#skill">Skills</a></li>
               <li><a href="#project">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
