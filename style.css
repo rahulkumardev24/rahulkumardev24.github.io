@@ -1199,3 +1199,381 @@ html {
     gap: 2rem;
   }
 }
+
+/* ----------- Apps Section Styles ------------- */
+.apps-section {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0.8) 100%),
+    url("live_app_2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.apps-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(61, 207, 211, 0.05) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(61, 207, 211, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.apps-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 50%, rgba(61, 207, 211, 0.08) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(61, 207, 211, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.apps-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.apps-section .section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeInDown 0.8s ease-in-out;
+}
+
+.apps-section .section-header h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.apps-section .section-header h1 span {
+  color: var(--primary-color);
+}
+
+.apps-section .section-subtitle {
+  font-size: 1rem;
+  color: #999;
+  max-width: 600px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.app-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(61, 207, 211, 0.2);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 0.8s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.app-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-color);
+  background: rgba(61, 207, 211, 0.05);
+  box-shadow: 0 12px 35px rgba(61, 207, 211, 0.2);
+}
+
+.app-icon-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.app-icon-container::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: rgba(61, 207, 211, 0.1);
+  border-radius: 12px;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+.app-card:hover .app-icon-container::before {
+  transform: scale(1.2);
+  background: rgba(61, 207, 211, 0.15);
+}
+
+.app-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(61, 207, 211, 0.2);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(61, 207, 211, 0.2);
+}
+
+.app-card:hover .app-icon {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(61, 207, 211, 0.3);
+  border-color: var(--primary-color);
+}
+
+.app-card h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.app-card p {
+  color: #999;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+  font-weight: 400;
+}
+
+.app-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: transparent;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.app-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: var(--primary-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+  z-index: -1;
+}
+
+.app-link:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.app-link:hover {
+  color: #000;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+.app-link i {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.app-link:hover i {
+  transform: scale(1.1);
+}
+
+.apps-cta {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding: 1rem 1.2rem;
+  background: rgba(61, 207, 211, 0.08);
+  border: 1px solid rgba(61, 207, 211, 0.3);
+  border-radius: 6px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.apps-cta:hover {
+  background: rgba(61, 207, 211, 0.12);
+  border-color: rgba(61, 207, 211, 0.5);
+  box-shadow: 0 6px 20px rgba(61, 207, 211, 0.15);
+}
+
+.apps-cta p {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.developer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1.2rem;
+  border: 1.5px solid var(--primary-color);
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(61, 207, 211, 0.1) 0%, transparent 100%);
+  position: relative;
+  overflow: hidden;
+  font-size: 0.85rem;
+}
+
+.developer-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: var(--primary-color);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s, height 0.5s;
+  z-index: -1;
+}
+
+.developer-link:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.developer-link:hover {
+  color: #000;
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(61, 207, 211, 0.3);
+}
+
+/* Apps Section Responsive */
+@media (max-width: 1024px) {
+  .apps-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .apps-section .section-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .apps-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .apps-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .apps-section .section-header h1 {
+    font-size: 2rem;
+  }
+
+  .apps-section .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .apps-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .app-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .app-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .app-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .app-card p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .apps-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .apps-section .section-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .apps-section .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .apps-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+
+  .app-card {
+    padding: 1.3rem 0.8rem;
+    border-radius: 10px;
+  }
+
+  .app-icon {
+    width: 65px;
+    height: 65px;
+  }
+
+  .app-icon-container::before {
+    width: 85px;
+    height: 85px;
+  }
+
+  .app-card h3 {
+    font-size: 1rem;
+  }
+
+  .app-card p {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .app-link {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}
