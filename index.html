@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- css file -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,68 +42,56 @@
     <title>
       Rahul Kumar Sahu - Crafting Digital Solutions for Apps & Websites
     </title>
+    <meta
+      name="description"
+      content="Rahul Kumar Sahu is a Full-Stack Developer specializing in Flutter mobile apps and modern websites, with 20+ published apps on the Google Play Store."
+    />
+    <link rel="icon" type="image/webp" href="icon/flutter%20icon%20new.webp" />
   </head>
   <body>
       <header>
-        <!-- Normal navigation  -->
+        <!-- Main navigation -->
         <div class="nav-container">
           <nav class="main-nav">
-            <div class="left">Rahul Kumar Sahu</div>
-            <div class="menu-btn">
-              <i class="fas fa-bars"></i>
+            <div class="left">
+              <a href="#home" class="logo">Rahul Kumar Sahu</a>
             </div>
+
             <div class="nav-links">
               <ul>
-                <li><a href="">Home</a></li>
-                <!-- navigation -->
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#apps">Apps</a></li>
-                <li><a href="#skills">Skill</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li class="nav-contact-link"><a href="#contact">Contact</a></li>
               </ul>
             </div>
+
             <div class="right">
-              <button class="common-btn" onclick="location.href = '#contact'">
-                Contact ME
-              </button>
+              <a href="#contact" class="common-btn">Contact ME</a>
             </div>
+
+            <button class="hamburger" aria-label="Toggle menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
           </nav>
         </div>
 
-        <!-- Main nav -->
-        <nav class="main-nav">
-          <div class="left">
-            <a href="/" class="logo">Rahul Kumar Sahu</a>
-          </div>
-
-          <button class="hamburger" aria-label="Toggle menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </button>
-
-          <div class="nav-links">
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#apps">Apps</a></li>
-              <li><a href="#skill">Skills</a></li>
-              <li><a href="#project">Projects</a></li>
-            </ul>
-          </div>
-
-          <div class="right">
-            <a href="#contact" class="common-btn">Contact ME</a>
-          </div>
-        </nav>
-
         <!-- HOME  -->
-        <div class="home">
-          <canvas id="particles-canvas"></canvas>
+        <div class="home" id="home">
+          <div class="aurora" aria-hidden="true">
+            <span class="aurora-blob aurora-blob-1"></span>
+            <span class="aurora-blob aurora-blob-2"></span>
+            <span class="aurora-blob aurora-blob-3"></span>
+          </div>
           <div class="left">
+            <span class="availability-badge"><span class="live-dot"></span>Available for Freelance & Full-time</span>
             <p id="greet">Hi, I'm <span class="typing-text"></span></p>
 
-            <h2>Rahul Kumar Sahu</h2>
+            <h1>Rahul Kumar Sahu</h1>
             <p id="developer">
               Crafting Innovative <span>Apps</span> and <span>Websites</span>
             </p>
@@ -106,28 +99,49 @@
               Passionate Full-Stack Developer | Expert in Mobile Apps & Web
               Development
             </p>
+
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <span class="hero-stat-value">20+</span>
+                <span class="hero-stat-label">Apps Built</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value">11+</span>
+                <span class="hero-stat-label">On Play Store</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value">3+</span>
+                <span class="hero-stat-label">Years Experience</span>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#projects" class="common-btn">View My Work</a>
+              <a href="#contact" class="common-btn outline-btn">Let's Talk</a>
+            </div>
+
             <div class="account">
               <div class="acc-type">
-                <a href="https://github.com/rahulkumardev24">
+                <a href="https://github.com/rahulkumardev24" target="_blank" aria-label="GitHub">
                   <!-- here we add alt key -->
                   <img src="icon/github.png" alt="githublogo"
                 /></a>
               </div>
               <div class="acc-type">
-                <a href="https://www.linkedin.com/in/rahulkumardev24/">
+                <a href="https://www.linkedin.com/in/rahulkumardev24/" target="_blank" aria-label="LinkedIn">
                   <!-- here we add alt key  -->
                   <img src="icon/linkedin.png" alt="linkdinlogo"
                 /></a>
               </div>
               <div class="acc-type">
-                <a href="https://www.instagram.com/kumar_339/?next=%2F">
+                <a href="https://www.instagram.com/kumar_339/?next=%2F" target="_blank" aria-label="Instagram">
                   <!-- here we add alt key  -->
                   <img src="icon/instagram.png" alt="instagramlogo"
                 /></a>
               </div>
 
                <div class="acc-type">
-                <a href="https://www.youtube.com/@appcreatorrahul">
+                <a href="https://www.youtube.com/@appcreatorrahul" target="_blank" aria-label="YouTube">
                   <!-- here we add alt key  -->
                   <img src="icon/youtube.png" alt="instagramlogo"
                 /></a>
@@ -138,8 +152,7 @@
           <div class="profile">
             <div id="profile"><img src="profile.png" alt="profile" /></div>
           </div>
-          </div>
-          
+
           <div class="scroll-down"></div>
         </div>
       </header>
@@ -172,7 +185,7 @@
             </div>
             <div class="highlight-item">
               <span class="highlight-label">Apps Published:</span>
-              <span class="highlight-value">10+ on Google Play Store</span>
+              <span class="highlight-value">11+ on Google Play Store</span>
             </div>
 
               <div class="highlight-item">
@@ -181,7 +194,7 @@
             </div>
 
           </div>
-          <button class="common-btn" id="cvDow">DOWNLOAD CV</button>
+          <button class="common-btn cv-download">DOWNLOAD CV</button>
         </div>
       </div>
     </section>
@@ -192,90 +205,171 @@
         <div class="section-header reveal">
           <h1>My Apps on <span>Google Play Store</span></h1>
           <p class="section-subtitle">
-            Explore my published applications available for download
+            11 self-published Android applications, live and available for download right now
           </p>
         </div>
 
-        <div class="apps-grid">
-          <!-- App 1: Simon Say -->
+        <div class="apps-grid reveal">
+          <!-- App 1: Smart Expiry Tracker -->
           <div class="app-card">
-            <div class="app-icon-container">
-              <img src="project icon/simony say.webp" alt="Simon Say App" class="app-icon" />
-            </div>
-            <h3>Simon Say</h3>
-            <p>A fun and engaging memory game</p>
-            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.simonsay" target="_blank" class="app-link">
-              <i class="fas fa-play"></i> View on Play Store
-            </a>
-          </div>
-
-          <!-- App 2: FactFuel -->
-          <div class="app-card">
-            <div class="app-icon-container">
-              <img src="project icon/fact fule.webp" alt="FactFuel App" class="app-icon" />
-            </div>
-            <h3>FactFuel</h3>
-            <p>Discover interesting facts and knowledge</p>
-            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.factfuel" target="_blank" class="app-link">
-              <i class="fas fa-play"></i> View on Play Store
-            </a>
-          </div>
-
-          <!-- App 3: Smart Expiry Tracker -->
-          <div class="app-card">
+            <span class="app-category">Utility</span>
+            <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
               <img src="project icon/expiry tracker.png" alt="Smart Expiry Tracker" class="app-icon" />
             </div>
             <h3>Smart Expiry Tracker</h3>
-            <p>Track expiry dates of products efficiently</p>
+            <p>Smart inventory app to track expiry dates of food, medicines & essentials with timely alerts.</p>
             <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.smartexpirytracker" target="_blank" class="app-link">
-              <i class="fas fa-play"></i> View on Play Store
+              <i class="fab fa-google-play"></i> Get on Play Store
             </a>
           </div>
 
-          <!-- App 4: Card Matching Memory Game -->
+          <!-- App 2: Quiz Jeeto -->
           <div class="app-card">
+            <span class="app-category">Quiz</span>
+            <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
-              <img src="project icon/match game.webp" alt="Card Matching Memory Game" class="app-icon" />
+              <div class="app-icon-tile icon-tile-1"><i class="fas fa-trophy"></i></div>
             </div>
-            <h3>Card Matching Memory Game</h3>
-            <p>Test your memory with this classic game</p>
-            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.card_matching_memory_game" target="_blank" class="app-link">
-              <i class="fas fa-play"></i> View on Play Store
+            <h3>Quiz Jeeto</h3>
+            <p>Test your knowledge across categories and win exciting rewards in this engaging quiz app.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.quizjeeto" target="_blank" class="app-link">
+              <i class="fab fa-google-play"></i> Get on Play Store
+            </a>
+          </div>
+
+          <!-- App 3: Patna Metro Guide -->
+          <div class="app-card">
+            <span class="app-category">Travel</span>
+            <span class="live-badge"><span class="live-dot"></span>Live</span>
+            <div class="app-icon-container">
+              <div class="app-icon-tile icon-tile-2"><i class="fas fa-train-subway"></i></div>
+            </div>
+            <h3>Patna Metro Guide</h3>
+            <p>Complete route guide, fares & station info to help Patna Metro commuters travel smart.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.metroguide.patna" target="_blank" class="app-link">
+              <i class="fab fa-google-play"></i> Get on Play Store
+            </a>
+          </div>
+
+          <!-- App 4: Baby Book -->
+          <div class="app-card">
+            <span class="app-category">Lifestyle</span>
+            <span class="live-badge"><span class="live-dot"></span>Live</span>
+            <div class="app-icon-container">
+              <img src="project icon/kids app.webp" alt="Baby Book" class="app-icon" />
+            </div>
+            <h3>Baby Book</h3>
+            <p>Capture and cherish your baby's precious moments, milestones & memories in one place.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.babybook" target="_blank" class="app-link">
+              <i class="fab fa-google-play"></i> Get on Play Store
             </a>
           </div>
 
           <!-- App 5: Tic Tac Toe -->
           <div class="app-card">
+            <span class="app-category">Game</span>
+            <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
               <img src="project icon/tic-tac-toe.png" alt="Tic Tac Toe" class="app-icon" />
             </div>
             <h3>Tic Tac Toe</h3>
-            <p>Classic game with modern design</p>
+            <p>Classic Tic-Tac-Toe reimagined with smooth animations and multiplayer fun.</p>
             <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.tictaktoe" target="_blank" class="app-link">
-              <i class="fas fa-play"></i> View on Play Store
+              <i class="fab fa-google-play"></i> Get on Play Store
             </a>
           </div>
 
-          <!-- App 6: Baby Book -->
+          <!-- App 6: Lockora -->
           <div class="app-card">
+            <span class="app-category">Security</span>
+            <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
-              <img src="project icon/kids app.webp" alt="Baby Book" class="app-icon" />
+              <div class="app-icon-tile icon-tile-3"><i class="fas fa-lock"></i></div>
             </div>
-            <h3>Baby Book</h3>
-            <p>Create and manage baby memories</p>
-            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.babybook" target="_blank" class="app-link">
-              <i class="fas fa-play"></i> View on Play Store
+            <h3>Lockora</h3>
+            <p>Secure your apps and private data with a fast, reliable app locker.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.lockora" target="_blank" class="app-link">
+              <i class="fab fa-google-play"></i> Get on Play Store
+            </a>
+          </div>
+
+          <!-- App 7: FactFuel -->
+          <div class="app-card">
+            <span class="app-category">Knowledge</span>
+            <span class="live-badge"><span class="live-dot"></span>Live</span>
+            <div class="app-icon-container">
+              <img src="project icon/fact fule.webp" alt="FactFuel App" class="app-icon" />
+            </div>
+            <h3>FactFuel</h3>
+            <p>Fuel your curiosity with bite-sized, interesting facts updated regularly.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.factfuel" target="_blank" class="app-link">
+              <i class="fab fa-google-play"></i> Get on Play Store
+            </a>
+          </div>
+
+          <!-- App 8: Card Matching Memory Game -->
+          <div class="app-card">
+            <span class="app-category">Game</span>
+            <span class="live-badge"><span class="live-dot"></span>Live</span>
+            <div class="app-icon-container">
+              <img src="project icon/match game.webp" alt="Card Matching Memory Game" class="app-icon" />
+            </div>
+            <h3>Card Matching Memory Game</h3>
+            <p>Sharpen your memory with this fun, colorful card matching challenge.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.card_matching_memory_game" target="_blank" class="app-link">
+              <i class="fab fa-google-play"></i> Get on Play Store
+            </a>
+          </div>
+
+          <!-- App 9: Patna Metro -->
+          <div class="app-card">
+            <span class="app-category">Travel</span>
+            <span class="live-badge"><span class="live-dot"></span>Live</span>
+            <div class="app-icon-container">
+              <div class="app-icon-tile icon-tile-4"><i class="fas fa-route"></i></div>
+            </div>
+            <h3>Patna Metro</h3>
+            <p>Your quick companion for Patna Metro timings, maps and journey planning.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.patnaMetro" target="_blank" class="app-link">
+              <i class="fab fa-google-play"></i> Get on Play Store
+            </a>
+          </div>
+
+          <!-- App 10: Color Memory Challenge -->
+          <div class="app-card">
+            <span class="app-category">Game</span>
+            <span class="live-badge"><span class="live-dot"></span>Live</span>
+            <div class="app-icon-container">
+              <div class="app-icon-tile icon-tile-5"><i class="fas fa-palette"></i></div>
+            </div>
+            <h3>Color Memory Challenge</h3>
+            <p>Train your brain with this vibrant color-sequence memory challenge.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.colormemorychallenge" target="_blank" class="app-link">
+              <i class="fab fa-google-play"></i> Get on Play Store
+            </a>
+          </div>
+
+          <!-- App 11: Traffic Lane Rush -->
+          <div class="app-card">
+            <span class="app-category">Game</span>
+            <span class="live-badge"><span class="live-dot"></span>Live</span>
+            <div class="app-icon-container">
+              <div class="app-icon-tile icon-tile-6"><i class="fas fa-car-side"></i></div>
+            </div>
+            <h3>Traffic Lane Rush</h3>
+            <p>Dodge traffic and race through lanes in this fast-paced arcade racer.</p>
+            <a href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.trafficlanerush" target="_blank" class="app-link">
+              <i class="fab fa-google-play"></i> Get on Play Store
             </a>
           </div>
         </div>
 
         <div class="apps-cta-button">
           <a href="https://play.google.com/store/apps/developer?id=AppCreateRahul" target="_blank" class="view-more-btn">
-            View More Apps
+            <i class="fab fa-google-play"></i> View Developer Profile
           </a>
         </div>
-      </div>
       </div>
     </section>
 
@@ -283,7 +377,7 @@
     <section class="skills-section" id="skills">
       <div class="skills-container">
         <div class="section-header reveal">
-          <h1 class="section-title" , style="color: white">
+          <h1 class="section-title">
             My <span>Skills</span>
           </h1>
           <p class="section-subtitle">
@@ -347,7 +441,7 @@
             </div>
             <h3>Supabase</h3>
             <div class="skill-level">
-              <div class="level-bar" style="width: 80%"></div>
+              <div class="level-bar" style="width: 65%"></div>
               <span>65%</span>
             </div>
           </div>
@@ -507,7 +601,7 @@
             </div>
             <h3>Adobe Premiere Pro</h3>
             <div class="skill-level">
-              <div class="level-bar" style="width: 65%"></div>
+              <div class="level-bar" style="width: 50%"></div>
               <span>50%</span>
             </div>
           </div>
@@ -759,13 +853,6 @@
             </div>
           </div>
         </div>
-            </div>
-
-          </div>
-
-
-        </div>
-
       </div>
     </section>
 
@@ -778,7 +865,7 @@
           Your trusted partner for creating innovative mobile apps and
           high-standard websites.
         </p>
-        <button class="common-btn" id="cvDow">DOWNLOAD CV</button>
+        <button class="common-btn cv-download">DOWNLOAD CV</button>
       </div>
     </section>
 
@@ -846,11 +933,11 @@
             <h2>Quick Links</h2>
             <ul>
               <!-- internal linking  + -->
-              <li><a href="#">Home</a></li>
+              <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#apps">Apps</a></li>
-              <li><a href="#skill">Skills</a></li>
-              <li><a href="#project">Projects</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
@@ -892,7 +979,7 @@
 
         <!-- Footer Copyright -->
         <div class="footer-bottom">
-          <p>&copy; 2025 Rahul Kumar Sahu. All Rights Reserved.</p>
+          <p>&copy; 2026 Rahul Kumar Sahu. All Rights Reserved.</p>
         </div>
       </footer>
     </footer>
