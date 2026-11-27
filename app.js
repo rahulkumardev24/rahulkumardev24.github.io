@@ -123,24 +123,24 @@ if (typingTextSpan) {
   }
 }
 
-// ---------- 3D tilt on the profile photo (mouse devices only, rAF-throttled) ----------
-const profileContainer = document.querySelector(".hero .profile");
-const profileImg = document.querySelector(".hero .profile img");
+// ---------- 3D tilt on the hero phone (mouse devices only, rAF-throttled) ----------
+const phoneScene = document.querySelector(".phone-scene");
+const phone = document.querySelector(".phone");
 
-if (profileContainer && profileImg && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+if (phoneScene && phone && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
   let tiltFrame = null;
-  profileContainer.addEventListener("mousemove", (e) => {
+  phoneScene.addEventListener("mousemove", (e) => {
     if (tiltFrame) return;
     tiltFrame = requestAnimationFrame(() => {
       tiltFrame = null;
-      const rect = profileContainer.getBoundingClientRect();
+      const rect = phoneScene.getBoundingClientRect();
       const x = (e.clientX - rect.left) / rect.width - 0.5;
       const y = (e.clientY - rect.top) / rect.height - 0.5;
-      profileImg.style.transform = `rotateX(${(y * 20).toFixed(2)}deg) rotateY(${(-x * 20).toFixed(2)}deg) scale(1.04)`;
+      phone.style.transform = `rotateY(${(-18 + x * 22).toFixed(2)}deg) rotateX(${(7 - y * 14).toFixed(2)}deg) rotateZ(1.5deg)`;
     });
   });
-  profileContainer.addEventListener("mouseleave", () => {
-    profileImg.style.transform = "";
+  phoneScene.addEventListener("mouseleave", () => {
+    phone.style.transform = "";
   });
 }
 

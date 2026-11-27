@@ -461,23 +461,242 @@ h3 {
   justify-self: center;
 }
 
-.profile {
+/* ---------- 3D phone mockup ---------- */
+.phone-scene {
+  --w: 290px;
   position: relative;
-  width: min(390px, 80vw);
-  aspect-ratio: 460 / 560;
-  border-radius: 220px 220px 28px 28px;
-  overflow: hidden;
-  background: var(--grad);
-  box-shadow: 0 30px 70px rgba(61, 207, 211, 0.18);
-  perspective: 1000px;
+  padding: 10px 0 44px;
+  perspective: 1600px;
 }
 
-.profile img {
-  width: 100%;
+.phone-float {
+  animation: phoneFloat 6s ease-in-out infinite;
+}
+
+@keyframes phoneFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.phone {
+  position: relative;
+  width: var(--w);
+  aspect-ratio: 9 / 18.6;
+  padding: calc(var(--w) * 0.035);
+  font-size: calc(var(--w) / 290 * 16);
+  border-radius: calc(var(--w) * 0.15);
+  background: linear-gradient(145deg, #34414d, #151c24 38%, #0b0f14);
+  transform: rotateY(-18deg) rotateX(7deg) rotateZ(1.5deg);
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease-out;
+  /* stacked shadows fake the phone's metal edge + a soft drop shadow */
+  box-shadow:
+    inset 0 0 0 1.5px rgba(255, 255, 255, 0.1),
+    1px 1px 0 #26303a, 2px 2px 0 #232c35, 3px 3px 0 #202830, 4px 4px 0 #1d242c,
+    5px 5px 0 #1a2128, 6px 6px 0 #171d24, 7px 7px 0 #141a20, 8px 8px 0 #12171c,
+    30px 44px 60px rgba(0, 0, 0, 0.55),
+    0 0 70px rgba(61, 207, 211, 0.16);
+}
+
+.phone-btn {
+  position: absolute;
+  right: -3px;
+  width: 4px;
+  border-radius: 0 3px 3px 0;
+  background: linear-gradient(90deg, #2c3742, #1a222a);
+}
+
+.phone-btn-power { top: 24%; height: 9%; }
+.phone-btn-vol { top: 37%; height: 15%; }
+
+.phone-screen {
+  position: relative;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.85em;
+  overflow: hidden;
+  border-radius: calc(var(--w) * 0.12);
+  background:
+    radial-gradient(130% 55% at 50% 0%, rgba(61, 207, 211, 0.28), transparent 62%),
+    radial-gradient(90% 40% at 100% 100%, rgba(44, 147, 150, 0.25), transparent 70%),
+    #0d1319;
+  color: #fff;
+}
+
+/* glass glare */
+.phone-screen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.09), transparent 32%);
+  pointer-events: none;
+}
+
+.ps-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2.2em;
+  padding: 0 0.45em;
+  font-size: 0.66em;
+  font-weight: 600;
+}
+
+.ps-cam {
+  width: 1.05em;
+  height: 1.05em;
+  border-radius: 50%;
+  background: #000;
+  box-shadow: 0 0 0 2px #1a2129;
+}
+
+.ps-icons {
+  display: flex;
+  gap: 0.4em;
+  font-size: 0.9em;
+}
+
+.ps-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  margin-top: 0.5em;
+  padding: 0.65em;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1em;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.ps-profile img {
+  width: 3em;
+  height: 3em;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  background: var(--grad);
   object-fit: cover;
   object-position: top center;
-  transition: transform 0.15s ease-out;
+}
+
+.ps-profile strong {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 0.86em;
+  line-height: 1.25;
+}
+
+.ps-profile span {
+  display: block;
+  font-size: 0.66em;
+  color: var(--primary-light);
+}
+
+.ps-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4em;
+  margin-top: 0.55em;
+}
+
+.ps-stats div {
+  padding: 0.45em 0.2em;
+  border-radius: 0.7em;
+  background: rgba(61, 207, 211, 0.09);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.ps-stats b {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 0.82em;
+}
+
+.ps-stats span {
+  font-size: 0.56em;
+  color: var(--muted);
+}
+
+.ps-label {
+  margin: 0.9em 0 0.55em 0.2em;
+  font-size: 0.6em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.ps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8em 0.3em;
+}
+
+.ps-grid a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3em;
+  min-width: 0;
+  transition: transform 0.2s ease;
+}
+
+.ps-grid a:hover {
+  transform: translateY(-2px) scale(1.07);
+}
+
+.ps-grid img {
+  width: 2.8em;
+  height: 2.8em;
+  border-radius: 0.8em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.ps-grid span {
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 0.5em;
+  color: #c6d0da;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ps-play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  margin-top: auto;
+  padding: 0.6em;
+  border-radius: 0.8em;
+  background: var(--grad);
+  color: var(--on-primary);
+  font-family: var(--font-head);
+  font-size: 0.7em;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.ps-home {
+  display: block;
+  width: 36%;
+  height: 0.26em;
+  margin: 0.55em auto 0.6em;
+  border-radius: 1em;
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.phone-shadow {
+  position: absolute;
+  left: 12%;
+  right: 8%;
+  bottom: 4px;
+  height: 36px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(61, 207, 211, 0.28), transparent 70%);
+  pointer-events: none;
 }
 
 .float-chip {
@@ -501,13 +720,15 @@ h3 {
 }
 
 .chip-1 {
-  left: -36px;
-  bottom: 16%;
+  left: -56px;
+  bottom: 21%;
+  z-index: 2;
 }
 
 .chip-2 {
-  right: -24px;
-  top: 16%;
+  right: -40px;
+  bottom: 27%;
+  z-index: 2;
 }
 
 /* ---------- Sections ---------- */
@@ -1545,7 +1766,8 @@ a.contact-item:hover {
   }
 
   .hero-visual { order: -1; }
-  .profile { width: min(280px, 70vw); }
+  .phone-scene { --w: 250px; }
+  .phone { transform: rotateY(-12deg) rotateX(6deg) rotateZ(1deg); }
   .hero-lead { margin-left: auto; margin-right: auto; }
   .hero-actions,
   .hero .socials { justify-content: center; }
@@ -1621,6 +1843,7 @@ a.contact-item:hover {
   .container { padding: 0 18px; }
   .chip-1,
   .chip-2 { display: none; }
+  .phone-scene { --w: 236px; }
   .hero-actions .btn { flex: 1 1 100%; }
 }
 
