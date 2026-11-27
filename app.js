@@ -51,41 +51,61 @@ document.querySelectorAll(".cv-download").forEach((button) => {
   });
 });
 
-// ---------- Contact form (sends in place, no page redirect) ----------
-const contactForm = document.querySelector("#contact-form");
-const formStatus = document.querySelector("#form-status");
+// ---------- Forms (contact + app quote): send in place, no page redirect ----------
+document.querySelectorAll("form[data-ajax-action]").forEach((form) => {
+  const status = form.querySelector(".form-status");
 
-if (contactForm) {
-  contactForm.addEventListener("submit", async (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const button = contactForm.querySelector('button[type="submit"]');
-    const originalLabel = button.textContent;
+    const button = form.querySelector('button[type="submit"]');
+    const originalHTML = button.innerHTML;
     button.disabled = true;
     button.textContent = "Sending...";
-    formStatus.className = "form-status";
-    formStatus.textContent = "";
+    status.className = "form-status";
+    status.textContent = "";
 
     try {
-      const res = await fetch(contactForm.dataset.ajaxAction, {
+      const res = await fetch(form.dataset.ajaxAction, {
         method: "POST",
         headers: { Accept: "application/json" },
-        body: new FormData(contactForm),
+        body: new FormData(form),
       });
       const data = await res.json().catch(() => ({}));
       if (!res.ok || String(data.success) === "false") throw new Error(data.message || "Request failed");
 
-      const name = contactForm.querySelector("#name").value.trim();
-      formStatus.classList.add("success");
-      formStatus.textContent = `Thank you${name ? ", " + name : ""}! Your message has been sent. I'll get back to you soon.`;
-      contactForm.reset();
+      const name = (form.querySelector('[name="name"]')?.value || "").trim();
+      status.classList.add("success");
+      status.textContent =
+        form.id === "quote-form"
+          ? `Thank you${name ? ", " + name : ""}! I've received your app idea and will reply soon with a plan, price and timeline.`
+          : `Thank you${name ? ", " + name : ""}! Your message has been sent. I'll get back to you soon.`;
+      form.reset();
     } catch (err) {
-      formStatus.classList.add("error");
-      formStatus.innerHTML =
-        'Sorry, the message could not be sent. Please email me directly at <a href="mailto:rahulsahudev24@gmail.com">rahulsahudev24@gmail.com</a>.';
+      status.classList.add("error");
+      status.innerHTML =
+        'Sorry, the message could not be sent. Please email me at <a href="mailto:rahulsahudev24@gmail.com">rahulsahudev24@gmail.com</a> or <a href="https://wa.me/917970989057" target="_blank" rel="noopener">message me on WhatsApp</a>.';
     } finally {
       button.disabled = false;
-      button.textContent = originalLabel;
+      button.innerHTML = originalHTML;
     }
+  });
+});
+
+// ---------- Build-your-app: clicking an app type pre-fills the quote form ----------
+const typeSelect = document.querySelector("#q-type");
+const quoteForm = document.querySelector("#quote-form");
+
+if (typeSelect && quoteForm) {
+  document.querySelectorAll(".type-card[data-type]").forEach((card) => {
+    card.addEventListener("click", () => {
+      const wanted = card.dataset.type;
+      const option = Array.from(typeSelect.options).find((o) => o.text === wanted);
+      if (option) typeSelect.value = option.value || option.text;
+      quoteForm.scrollIntoView({ behavior: "smooth", block: "start" });
+      typeSelect.classList.add("flash");
+      setTimeout(() => typeSelect.classList.remove("flash"), 1600);
+      setTimeout(() => quoteForm.querySelector("#q-name").focus({ preventScroll: true }), 600);
+    });
   });
 }
 
