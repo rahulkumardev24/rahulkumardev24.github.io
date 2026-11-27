@@ -1749,6 +1749,7 @@ button:focus-visible {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.6rem;
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
@@ -2005,6 +2006,45 @@ button:focus-visible {
 .apps-grid .app-card:nth-child(9) { transition-delay: 0.45s; }
 .apps-grid .app-card:nth-child(10) { transition-delay: 0.5s; }
 .apps-grid .app-card:nth-child(11) { transition-delay: 0.55s; }
+.apps-grid .app-card:nth-child(12) { transition-delay: 0.6s; }
+
+/* Download count line on app cards */
+.app-card .app-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #bbb;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: -0.6rem 0 1.2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.app-card .app-meta i {
+  color: var(--primary-color);
+  font-size: 0.75rem;
+}
+
+/* Make card content stack evenly so buttons line up */
+.apps-grid .app-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.apps-grid .app-card p {
+  flex-grow: 1;
+}
+
+.highlight-value a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.highlight-value a:hover {
+  text-decoration: underline;
+}
 
 @media (max-width: 480px) {
   .app-card {
