@@ -92,7 +92,7 @@ if (contactForm) {
 // ---------- Typing text ----------
 const typingTextSpan = document.querySelector(".typing-text");
 if (typingTextSpan) {
-  const textArray = ["Flutter Developer", "Android App Publisher", "Full-Stack Developer"];
+  const textArray = ["Flutter Developer", "Android & iOS Developer", "Play Store Publisher"];
   let textIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
