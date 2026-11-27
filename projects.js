@@ -46,24 +46,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Add animation when scrolling to elements
-  const animateOnScroll = () => {
-    const elements = document.querySelectorAll(".project-item");
-
-    elements.forEach((element) => {
-      const elementPosition = element.getBoundingClientRect().top;
-      const screenPosition = window.innerHeight / 1.2;
-
-      if (elementPosition < screenPosition) {
-        element.style.opacity = "1";
-        element.style.transform = "translateY(0)";
-      }
-    });
-  };
-
-  // Run once on load
-  animateOnScroll();
-
-  // Then run on scroll
-  window.addEventListener("scroll", animateOnScroll);
+  // Reveal project cards as they enter the viewport.
+  // (IntersectionObserver instead of measuring every card on every scroll event.)
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  projectItems.forEach((item) => io.observe(item));
 });

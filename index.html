@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- css file -->
     <link rel="stylesheet" href="style.css" />
+    <link rel="preload" as="image" href="images/profile.webp" type="image/webp" />
     <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
@@ -14,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
 
@@ -50,7 +51,10 @@
     <meta property="og:description" content="12 live Android apps on Google Play as Everyday Tap Studio, plus modern websites." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://rahulkumardev24.github.io/" />
-    <meta property="og:image" content="https://rahulkumardev24.github.io/profile.png" />
+    <meta property="og:image" content="https://rahulkumardev24.github.io/images/og-profile.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="theme-color" content="#0d1117" />
+    <link rel="canonical" href="https://rahulkumardev24.github.io/" />
     <link rel="icon" type="image/webp" href="icon/flutter%20icon%20new.webp" />
   </head>
   <body>
@@ -78,7 +82,7 @@
               <a href="#contact" class="common-btn">Contact ME</a>
             </div>
 
-            <button class="hamburger" aria-label="Toggle menu">
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
               <span class="bar"></span>
               <span class="bar"></span>
               <span class="bar"></span>
@@ -128,35 +132,35 @@
 
             <div class="account">
               <div class="acc-type">
-                <a href="https://github.com/rahulkumardev24" target="_blank" aria-label="GitHub">
+                <a href="https://github.com/rahulkumardev24" target="_blank" rel="noopener" aria-label="GitHub">
                   <!-- here we add alt key -->
-                  <img src="icon/github.png" alt="githublogo"
+                  <img src="icon/github.png" alt="githublogo" width="26" height="26" loading="lazy"
                 /></a>
               </div>
               <div class="acc-type">
-                <a href="https://www.linkedin.com/in/rahulkumardev24/" target="_blank" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/rahulkumardev24/" target="_blank" rel="noopener" aria-label="LinkedIn">
                   <!-- here we add alt key  -->
-                  <img src="icon/linkedin.png" alt="linkdinlogo"
+                  <img src="icon/linkedin.png" alt="linkdinlogo" width="26" height="26" loading="lazy"
                 /></a>
               </div>
               <div class="acc-type">
-                <a href="https://www.instagram.com/kumar_339/?next=%2F" target="_blank" aria-label="Instagram">
+                <a href="https://www.instagram.com/kumar_339/?next=%2F" target="_blank" rel="noopener" aria-label="Instagram">
                   <!-- here we add alt key  -->
-                  <img src="icon/instagram.png" alt="instagramlogo"
+                  <img src="icon/instagram.png" alt="instagramlogo" width="26" height="26" loading="lazy"
                 /></a>
               </div>
 
                <div class="acc-type">
-                <a href="https://www.youtube.com/@appcreatorrahul" target="_blank" aria-label="YouTube">
+                <a href="https://www.youtube.com/@appcreatorrahul" target="_blank" rel="noopener" aria-label="YouTube">
                   <!-- here we add alt key  -->
-                  <img src="icon/youtube.png" alt="youtubelogo"
+                  <img src="icon/youtube.png" alt="youtubelogo" width="26" height="26" loading="lazy"
                 /></a>
               </div>
 
             </div>
           </div>
           <div class="profile">
-            <div id="profile"><img src="profile.png" alt="profile" /></div>
+            <div id="profile"><img src="images/profile.webp" alt="Rahul Kumar Sahu" width="460" height="560" fetchpriority="high" decoding="async" /></div>
           </div>
 
           <div class="scroll-down"></div>
@@ -169,7 +173,7 @@
     <section id="about" class="about-section">
       <div class="about-container">
         <div class="about-left reveal-left">
-          <img src="about_img.jpg" alt="Rahul Kumar Sahu" />
+          <img src="images/about.webp" alt="Rahul Kumar Sahu studying in a library" width="820" height="1282" loading="lazy" decoding="async" />
         </div>
         <div class="about-right reveal-right">
           <h1>About <span>Me</span></h1>
@@ -225,7 +229,7 @@
             <span class="app-category">Trivia</span>
             <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
-              <img src="project icon/play/quizjeeto.png" alt="Quiz Jeeto: GK Quiz & Games app icon" class="app-icon" width="80" height="80" loading="lazy" />
+              <img src="images/icons/play-quizjeeto.webp" alt="Quiz Jeeto: GK Quiz & Games app icon" class="app-icon" width="80" height="80" loading="lazy" decoding="async" />
             </div>
             <h3>Quiz Jeeto: GK Quiz & Games</h3>
             <p>Daily GK quiz in Hindi & English with 8 brain games, daily missions and coins you can redeem to UPI.</p>
@@ -240,7 +244,7 @@
             <span class="app-category">Productivity</span>
             <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
-              <img src="project icon/play/smartexpirytracker.jpg" alt="Food & Medicine Expiry Tracker app icon" class="app-icon" width="80" height="80" loading="lazy" />
+              <img src="images/icons/play-smartexpirytracker.webp" alt="Food & Medicine Expiry Tracker app icon" class="app-icon" width="80" height="80" loading="lazy" decoding="async" />
             </div>
             <h3>Food & Medicine Expiry Tracker</h3>
             <p>Track expiry dates of food, medicines & household items with smart reminder alerts to cut waste.</p>
@@ -255,7 +259,7 @@
             <span class="app-category">Travel & Local</span>
             <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
-              <img src="project icon/play/patnaMetro.png" alt="Patna Guide: Metro & City Info app icon" class="app-icon" width="80" height="80" loading="lazy" />
+              <img src="images/icons/play-patnaMetro.webp" alt="Patna Guide: Metro & City Info app icon" class="app-icon" width="80" height="80" loading="lazy" decoding="async" />
             </div>
             <h3>Patna Guide: Metro & City Info</h3>
             <p>Unofficial guide to Patna Metro routes, stations and map, plus live Patna AQI and helplines.</p>
@@ -270,7 +274,7 @@
             <span class="app-category">Education</span>
             <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
-              <img src="project icon/play/babybook.png" alt="Baby Book: Kids ABC 123 Games app icon" class="app-icon" width="80" height="80" loading="lazy" />
+              <img src="images/icons/play-babybook.webp" alt="Baby Book: Kids ABC 123 Games app icon" class="app-icon" width="80" height="80" loading="lazy" decoding="async" />
             </div>
             <h3>Baby Book: Kids ABC 123 Games</h3>
             <p>Colourful learning for ages 2–7: ABC, 123, tracing, maths, colours, shapes and animals with voice.</p>
@@ -285,7 +289,7 @@
             <span class="app-category">Puzzle</span>
             <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
-              <img src="project icon/play/card_matching_memory_game.png" alt="Flip Match: Card Memory Game app icon" class="app-icon" width="80" height="80" loading="lazy" />
+              <img src="images/icons/play-card_matching_memory_game.webp" alt="Flip Match: Card Memory Game app icon" class="app-icon" width="80" height="80" loading="lazy" decoding="async" />
             </div>
             <h3>Flip Match: Card Memory Game</h3>
             <p>Flip cards and match pairs & triples across 500 levels that train memory and focus.</p>
@@ -300,7 +304,7 @@
             <span class="app-category">Puzzle</span>
             <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
-              <img src="project icon/play/colormemorychallenge.png" alt="Color Memory: Pattern Puzzle app icon" class="app-icon" width="80" height="80" loading="lazy" />
+              <img src="images/icons/play-colormemorychallenge.webp" alt="Color Memory: Pattern Puzzle app icon" class="app-icon" width="80" height="80" loading="lazy" decoding="async" />
             </div>
             <h3>Color Memory: Pattern Puzzle</h3>
             <p>Watch, listen and repeat ever-longer colour sequences to sharpen memory and reaction speed.</p>
@@ -315,7 +319,7 @@
             <span class="app-category">Racing</span>
             <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
-              <img src="project icon/play/trafficlanerush.png" alt="Traffic Lane Rush app icon" class="app-icon" width="80" height="80" loading="lazy" />
+              <img src="images/icons/play-trafficlanerush.webp" alt="Traffic Lane Rush app icon" class="app-icon" width="80" height="80" loading="lazy" decoding="async" />
             </div>
             <h3>Traffic Lane Rush</h3>
             <p>Tap to switch lanes, dodge highway traffic and collect coins to unlock faster cars.</p>
@@ -330,7 +334,7 @@
             <span class="app-category">Tools</span>
             <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
-              <img src="project icon/play/lockora.png" alt="Lockora - Hide Photos & Videos app icon" class="app-icon" width="80" height="80" loading="lazy" />
+              <img src="images/icons/play-lockora.webp" alt="Lockora - Hide Photos & Videos app icon" class="app-icon" width="80" height="80" loading="lazy" decoding="async" />
             </div>
             <h3>Lockora - Hide Photos & Videos</h3>
             <p>Encrypted, offline vault that hides photos, videos, files & notes behind a PIN or fingerprint.</p>
@@ -345,7 +349,7 @@
             <span class="app-category">Health & Fitness</span>
             <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
-              <img src="project icon/play/setzyro.png" alt="Setzyro app icon" class="app-icon" width="80" height="80" loading="lazy" />
+              <img src="images/icons/play-setzyro.webp" alt="Setzyro app icon" class="app-icon" width="80" height="80" loading="lazy" decoding="async" />
             </div>
             <h3>Setzyro</h3>
             <p>Personalised weekly workout plans built around your goals and equipment, with progress tracking.</p>
@@ -360,7 +364,7 @@
             <span class="app-category">Puzzle</span>
             <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
-              <img src="project icon/play/arrowtappuzzlegame.png" alt="Arrow Tap Puzzle Game app icon" class="app-icon" width="80" height="80" loading="lazy" />
+              <img src="images/icons/play-arrowtappuzzlegame.webp" alt="Arrow Tap Puzzle Game app icon" class="app-icon" width="80" height="80" loading="lazy" decoding="async" />
             </div>
             <h3>Arrow Tap Puzzle Game</h3>
             <p>A relaxing logic puzzle: tap arrows to slide them off the board in the right order.</p>
@@ -375,7 +379,7 @@
             <span class="app-category">Puzzle</span>
             <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
-              <img src="project icon/play/tictaktoe.png" alt="Tic Tac Toe: XO 2 Player Game app icon" class="app-icon" width="80" height="80" loading="lazy" />
+              <img src="images/icons/play-tictaktoe.webp" alt="Tic Tac Toe: XO 2 Player Game app icon" class="app-icon" width="80" height="80" loading="lazy" decoding="async" />
             </div>
             <h3>Tic Tac Toe: XO 2 Player Game</h3>
             <p>Classic XO played offline against a smart AI or a friend in 2-player mode.</p>
@@ -390,7 +394,7 @@
             <span class="app-category">Education</span>
             <span class="live-badge"><span class="live-dot"></span>Live</span>
             <div class="app-icon-container">
-              <img src="project icon/play/factfuel.png" alt="FactFuel: Fun Facts & Trivia app icon" class="app-icon" width="80" height="80" loading="lazy" />
+              <img src="images/icons/play-factfuel.webp" alt="FactFuel: Fun Facts & Trivia app icon" class="app-icon" width="80" height="80" loading="lazy" decoding="async" />
             </div>
             <h3>FactFuel: Fun Facts & Trivia</h3>
             <p>A fresh “did you know” fact every day across science, space, history and animals.</p>
@@ -442,7 +446,7 @@
           <!-- Dart -->
           <div class="skill-card">
             <div class="skill-icon">
-              <img src="icon/dartnew.png" alt="Dart" loading="lazy" />
+              <img src="icon/dartnew.png" alt="Dart" loading="lazy" decoding="async" />
               <div class="icon-background"></div>
             </div>
             <h3>Dart</h3>
@@ -472,7 +476,7 @@
           <!-- supabase -->
           <div class="skill-card">
             <div class="skill-icon">
-              <img src="icon/supabase.png" alt="supabase" loading="lazy" />
+              <img src="icon/supabase.png" alt="supabase" loading="lazy" decoding="async" />
               <div class="icon-background"></div>
             </div>
             <h3>Supabase</h3>
@@ -485,7 +489,7 @@
           <!-- SQLite -->
           <div class="skill-card">
             <div class="skill-icon">
-              <img src="icon/sqlite new.png" alt="SQLite" loading="lazy" />
+              <img src="icon/sqlite new.png" alt="SQLite" loading="lazy" decoding="async" />
               <div class="icon-background"></div>
             </div>
             <h3>SQLite</h3>
@@ -498,7 +502,7 @@
           <!-- API -->
           <div class="skill-card">
             <div class="skill-icon">
-              <img src="icon/api icon.png" alt="Api" loading="lazy" />
+              <img src="icon/api icon.png" alt="Api" loading="lazy" decoding="async" />
               <div class="icon-background"></div>
             </div>
             <h3>API Integration</h3>
@@ -511,7 +515,7 @@
           <!-- SQL -->
           <div class="skill-card">
             <div class="skill-icon">
-              <img src="icon/mysqlnew.png" alt="MySQL" loading="lazy" />
+              <img src="icon/mysqlnew.png" alt="MySQL" loading="lazy" decoding="async" />
               <div class="icon-background"></div>
             </div>
             <h3>SQL</h3>
@@ -524,7 +528,7 @@
           <!-- HTML -->
           <div class="skill-card">
             <div class="skill-icon">
-              <img src="icon/html55.png" alt="HTML" loading="lazy" />
+              <img src="icon/html55.png" alt="HTML" loading="lazy" decoding="async" />
               <div class="icon-background"></div>
             </div>
             <h3>HTML5</h3>
@@ -537,7 +541,7 @@
           <!-- CSS -->
           <div class="skill-card">
             <div class="skill-icon">
-              <img src="icon/css.png" alt="CSS" loading="lazy" />
+              <img src="icon/css.png" alt="CSS" loading="lazy" decoding="async" />
               <div class="icon-background"></div>
             </div>
             <h3>CSS</h3>
@@ -550,7 +554,7 @@
           <!-- Bootstrap -->
           <div class="skill-card">
             <div class="skill-icon">
-              <img src="icon/bootstrap.png" alt="Bootstrap" loading="lazy" />
+              <img src="icon/bootstrap.png" alt="Bootstrap" loading="lazy" decoding="async" />
               <div class="icon-background"></div>
             </div>
             <h3>Bootstrap</h3>
@@ -563,7 +567,7 @@
           <!-- JavaScript -->
           <div class="skill-card">
             <div class="skill-icon">
-              <img src="icon/jss.png" alt="JavaScript" loading="lazy" />
+              <img src="icon/jss.png" alt="JavaScript" loading="lazy" decoding="async" />
               <div class="icon-background"></div>
             </div>
             <h3>JavaScript</h3>
@@ -576,7 +580,7 @@
           <!-- Kotlin -->
           <div class="skill-card">
             <div class="skill-icon">
-              <img src="icon/kotlin.png" alt="Kotlin" loading="lazy" />
+              <img src="icon/kotlin.png" alt="Kotlin" loading="lazy" decoding="async" />
               <div class="icon-background"></div>
             </div>
             <h3>Kotlin</h3>
@@ -589,7 +593,7 @@
           <!-- Java -->
           <div class="skill-card">
             <div class="skill-icon">
-              <img src="icon/java.png" alt="java" loading="lazy" />
+              <img src="icon/java.png" alt="java" loading="lazy" decoding="async" />
               <div class="icon-background"></div>
             </div>
             <h3>Java</h3>
@@ -602,7 +606,7 @@
           <!-- Python -->
           <div class="skill-card">
             <div class="skill-icon">
-              <img src="icon/python.png" alt="python" loading="lazy" />
+              <img src="icon/python.png" alt="python" loading="lazy" decoding="async" />
               <div class="icon-background"></div>
             </div>
             <h3>Python</h3>
@@ -615,7 +619,7 @@
           <!-- Canvas -->
           <div class="skill-card">
             <div class="skill-icon">
-              <img src="icon/canvas icon.webp" alt="Canva" loading="lazy" />
+              <img src="icon/canvas icon.webp" alt="Canva" loading="lazy" decoding="async" />
               <div class="icon-background"></div>
             </div>
             <h3>Canva</h3>
@@ -659,14 +663,17 @@
           <div class="project-card">
             <div class="project-media">
               <img
-                src="video/smart expiry tracker.png"
+                src="images/projects/smart-expiry-tracker.webp"
                 alt="Food & Medicine Expiry Tracker app"
                 class="project-image"
+                width="800" height="671"
+                loading="lazy"
+                decoding="async"
               />
               <div class="project-hover">
                 <div class="project-logo">
                   <img
-                    src="project icon/smart expiry.webp"
+                    src="images/icons/smart-expiry.webp"
                     alt="Expiry Tracker logo"
                   />
                 </div>
@@ -675,6 +682,7 @@
                   href="https://play.google.com/store/apps/details?id=com.appcreatorrahul.smartexpirytracker"
                   class="project-link"
                   target="_blank"
+                  rel="noopener"
                 >
                   <i class="fas fa-external-link-alt"></i> View Project
                 </a>
@@ -703,14 +711,17 @@
           <div class="project-card">
             <div class="project-media">
               <img
-                src="video/ping me new.png"
+                src="images/projects/ping-me-new.webp"
                 alt="Ping Me chat app"
                 class="project-image"
+                width="800" height="671"
+                loading="lazy"
+                decoding="async"
               />
               <div class="project-hover">
                 <div class="project-logo">
                   <img
-                    src="project icon/app_logo.png"
+                    src="images/icons/app_logo.webp"
                     alt="Ping Me logo"
                   />
                 </div>
@@ -719,6 +730,7 @@
                   href="https://github.com/rahulkumardev24/PingMe---Flutter-Chat-App"
                   class="project-link"
                   target="_blank"
+                  rel="noopener"
                 >
                   <i class="fas fa-external-link-alt"></i> View Project
                 </a>
@@ -745,19 +757,23 @@
           <div class="project-card">
             <div class="project-media">
               <img
-                src="video/Chatbot app portfolio.png"
-                alt="Chat bot"
+                src="images/projects/chatbot-app-portfolio.webp"
+                alt="AI chatbot app"
                 class="project-image"
+                width="800" height="671"
+                loading="lazy"
+                decoding="async"
               />
               <div class="project-hover">
                 <div class="project-logo">
-                  <img src="project icon/chat bot.png" alt="Chat bot" />
+                  <img src="images/icons/chat-bot.webp" alt="Chat bot" />
                 </div>
                 <h3>Chat bot</h3>
                 <a
                   href="https://github.com/rahulkumardev24/chat_bot_app"
                   class="project-link"
                   target="_blank"
+                  rel="noopener"
                 >
                   <i class="fas fa-external-link-alt"></i> View Project
                 </a>
@@ -901,7 +917,10 @@
           Your trusted partner for creating innovative mobile apps and
           high-standard websites.
         </p>
-        <button class="common-btn cv-download">DOWNLOAD CV</button>
+        <div class="freelance-actions">
+          <a href="#contact" class="common-btn">Hire Me</a>
+          <button class="common-btn outline-btn cv-download">Download CV</button>
+        </div>
       </div>
     </section>
 
@@ -919,9 +938,13 @@
         <form
           id="contact-form"
           action="https://formsubmit.co/rahulsahudev24@gmail.com"
+          data-ajax-action="https://formsubmit.co/ajax/rahulsahudev24@gmail.com"
           method="POST"
           class="reveal"
         >
+          <input type="hidden" name="_subject" value="New message from your portfolio" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" style="display: none" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <div class="input-group">
             <label for="name">Full Name</label>
             <input type="text" id="name" name="name" required />
@@ -948,12 +971,12 @@
           </div>
 
           <button type="submit" class="common-btn">Send Message</button>
+          <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
     </section>
 
-    <footer>
-      <!-- FOOTER SECTION -->
+    <!-- FOOTER SECTION -->
       <footer class="footer">
         <div class="footer-container reveal">
           <!-- Footer Branding & About -->
@@ -985,43 +1008,45 @@
             <div class="social-links">
               <!-- external links  -->
               <!-- add hitub links  -->
-              <a href="https://github.com/rahulkumardev24" target="_blank"
-                ><img src="icon/github.png" alt="Github"
+              <a href="https://github.com/rahulkumardev24" target="_blank" rel="noopener" aria-label="GitHub"
+                ><img src="icon/github.png" alt="Github" width="26" height="26" loading="lazy"
               /></a>
               <!-- add linkdin links  -->
               <a
                 href="https://www.linkedin.com/in/rahulkumardev24/"
-                target="_blank"
-                ><img src="icon/linkedin.png" alt="LinkedIn"
+                target="_blank" rel="noopener" aria-label="LinkedIn"
+                ><img src="icon/linkedin.png" alt="LinkedIn" width="26" height="26" loading="lazy"
               /></a>
               <!-- add instgram links  -->
-              <a href="https://www.instagram.com/kumar_339/" target="_blank"
-                ><img src="icon/instagram.png" alt="Instagram"
+              <a href="https://www.instagram.com/kumar_339/" target="_blank" rel="noopener" aria-label="Instagram"
+                ><img src="icon/instagram.png" alt="Instagram" width="26" height="26" loading="lazy"
               /></a>
-                   <a href="https://www.youtube.com/@appcreatorrahul" target="_blank"
-                ><img src="icon/youtube.png" alt="YouTube"
+                   <a href="https://www.youtube.com/@appcreatorrahul" target="_blank" rel="noopener" aria-label="YouTube"
+                ><img src="icon/youtube.png" alt="YouTube" width="26" height="26" loading="lazy"
               /></a>
             </div>
           </div>
 
-          <!-- Footer Newsletter -->
-          <div class="footer-section newsletter">
-            <h2>Subscribe to My Newsletter</h2>
-            <form id="newsletter-form">
-              <input type="email" placeholder="Enter your email" required />
-              <button type="submit">Subscribe</button>
-            </form>
+          <!-- Footer Contact -->
+          <div class="footer-section contact-info">
+            <h2>Get in Touch</h2>
+            <ul class="footer-contact-list">
+              <li><i class="fas fa-envelope"></i><a href="mailto:rahulsahudev24@gmail.com">rahulsahudev24@gmail.com</a></li>
+              <li><i class="fab fa-google-play"></i><a href="https://play.google.com/store/apps/developer?id=Everyday+Tap+Studio" target="_blank" rel="noopener">Everyday Tap Studio</a></li>
+              <li><i class="fas fa-location-dot"></i><span>Delhi, India</span></li>
+            </ul>
           </div>
         </div>
 
         <!-- Footer Copyright -->
         <div class="footer-bottom">
-          <p>&copy; 2026 Rahul Kumar Sahu. All Rights Reserved.</p>
+          <p>&copy; <span id="year">2026</span> Rahul Kumar Sahu. All Rights Reserved.</p>
         </div>
       </footer>
-    </footer>
 
     <!-- add js  -->
+    <button class="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
+
     <script src="app.js"></script>
   </body>
 </html>

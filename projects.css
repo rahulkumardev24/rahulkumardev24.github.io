@@ -32,12 +32,6 @@ body {
   line-height: 1.6;
 }
 
-@font-face {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  src: url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-}
 
 .container {
   max-width: 1200px;
@@ -48,7 +42,7 @@ body {
 /* Header Styles */
 .projects-header {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(background11.jpg) no-repeat center center;
+    url("images/projects-header-bg.webp") no-repeat center center;
   background-size: cover;
   color: var(--white);
   padding: 7rem 0 5rem;
@@ -84,7 +78,6 @@ body {
   background: rgba(255, 255, 255, 0.1);
   padding: 8px 15px;
   border-radius: 30px;
-  backdrop-filter: blur(5px);
 }
 
 .back-button i {
@@ -563,4 +556,34 @@ body {
     margin: 1.5rem auto 0;
     display: inline-flex;
   }
+}
+
+/* Link from the projects header to the live Play Store apps */
+.header-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.8rem;
+  padding: 0.8rem 1.6rem;
+  border: 2px solid #3dcfd3;
+  border-radius: 8px;
+  color: #3dcfd3;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  z-index: 2;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.header-cta:hover {
+  background: #3dcfd3;
+  color: #04211f;
+}
+
+.project-item {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-item { opacity: 1 !important; transform: none !important; transition: none !important; }
 }
