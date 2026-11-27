@@ -37,8 +37,8 @@ document.addEventListener("keydown", (e) => {
 });
 
 // ---------- Download CV ----------
-const RESUME_URL =
-  "https://drive.google.com/uc?export=download&id=1-EJqyHu9bPwu_HGftUBw69JN111FZynq";
+// Current resume (Google Drive, shared publicly). View link is used directly in index.html.
+const RESUME_URL = "https://drive.google.com/uc?export=download&id=1z6cHdTLaH6T0zLG1qcJDFjfSTeb-2bEw";
 
 document.querySelectorAll(".cv-download").forEach((button) => {
   button.addEventListener("click", () => {
@@ -90,24 +90,6 @@ document.querySelectorAll("form[data-ajax-action]").forEach((form) => {
     }
   });
 });
-
-// ---------- Build-your-app: clicking an app type pre-fills the quote form ----------
-const typeSelect = document.querySelector("#q-type");
-const quoteForm = document.querySelector("#quote-form");
-
-if (typeSelect && quoteForm) {
-  document.querySelectorAll(".type-card[data-type]").forEach((card) => {
-    card.addEventListener("click", () => {
-      const wanted = card.dataset.type;
-      const option = Array.from(typeSelect.options).find((o) => o.text === wanted);
-      if (option) typeSelect.value = option.value || option.text;
-      quoteForm.scrollIntoView({ behavior: "smooth", block: "start" });
-      typeSelect.classList.add("flash");
-      setTimeout(() => typeSelect.classList.remove("flash"), 1600);
-      setTimeout(() => quoteForm.querySelector("#q-name").focus({ preventScroll: true }), 600);
-    });
-  });
-}
 
 // ---------- Typing text ----------
 const typingTextSpan = document.querySelector(".typing-text");
