@@ -92,7 +92,7 @@ if (contactForm) {
 // ---------- Typing text ----------
 const typingTextSpan = document.querySelector(".typing-text");
 if (typingTextSpan) {
-  const textArray = ["App Developer", "Flutter Developer", "Web Developer", "Play Store Publisher"];
+  const textArray = ["Flutter Developer", "Android App Publisher", "Full-Stack Developer"];
   let textIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
@@ -102,6 +102,7 @@ if (typingTextSpan) {
   if (reduceMotion) {
     typingTextSpan.textContent = textArray[0];
   } else {
+    typingTextSpan.textContent = "";
     const type = () => {
       const currentText = textArray[textIndex];
       charIndex += isDeleting ? -1 : 1;
@@ -123,8 +124,8 @@ if (typingTextSpan) {
 }
 
 // ---------- 3D tilt on the profile photo (mouse devices only, rAF-throttled) ----------
-const profileContainer = document.querySelector(".home .profile");
-const profileImg = document.querySelector(".home .profile img");
+const profileContainer = document.querySelector(".hero .profile");
+const profileImg = document.querySelector(".hero .profile img");
 
 if (profileContainer && profileImg && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
   let tiltFrame = null;
@@ -156,14 +157,6 @@ const revealObserver = new IntersectionObserver(
   { threshold: 0.12 }
 );
 document.querySelectorAll(".reveal, .reveal-left, .reveal-right").forEach((el) => revealObserver.observe(el));
-
-// ---------- Pause the hero aurora animation while the hero is off screen ----------
-const home = document.querySelector(".home");
-if (home) {
-  new IntersectionObserver(([entry]) => {
-    home.classList.toggle("in-view", entry.isIntersecting);
-  }).observe(home);
-}
 
 // ---------- Highlight the nav link of the section in view ----------
 const navAnchors = new Map();
